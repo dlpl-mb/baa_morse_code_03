@@ -11,18 +11,6 @@ let auswahl_buchstabe = ""
 let index = 0
 let neigung = 0
 let auswahl_morsecode = ""
-basic.showIcon(IconNames.Yes)
-let liste_buchstaben = [
-"A",
-"B",
-"C",
-"D",
-"E",
-"F",
-"G",
-"S",
-"O"
-]
 let liste_morsecodes = [
 ".-",
 "-...",
@@ -31,9 +19,75 @@ let liste_morsecodes = [
 ".",
 "..-.",
 "--.",
+"....",
+"..",
+".---",
+"-.-",
+".-..",
+"--",
+"-.",
+"---",
+".--.",
+"--.-",
+".-.",
 "...",
-"---"
+"-",
+"..-",
+"...-",
+".--",
+"-..-",
+"-.--",
+"--..",
+".----",
+"..---",
+"...--",
+"....-",
+".....",
+"-....",
+"--...",
+"---..",
+"----.",
+"-----"
 ]
+let liste_buchstaben = [
+"A",
+"B",
+"C",
+"D",
+"E",
+"F",
+"G",
+"H",
+"I",
+"J",
+"K",
+"L",
+"M",
+"N",
+"O",
+"P",
+"Q",
+"R",
+"S",
+"T",
+"U",
+"V",
+"W",
+"X",
+"Y",
+"Z",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"0"
+]
+basic.showIcon(IconNames.Yes)
 let anz_bst = liste_buchstaben.length - 1
 radio.setGroup(99)
 basic.forever(function () {
@@ -53,5 +107,4 @@ basic.forever(function () {
     auswahl_buchstabe = liste_buchstaben[index]
     auswahl_morsecode = liste_morsecodes[index]
     basic.showString("" + (auswahl_buchstabe))
-    basic.pause(500)
 })
