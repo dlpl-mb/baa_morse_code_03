@@ -14,18 +14,19 @@
 * Diese Antwort erhält der **Sender** auf sein Micro:bit Display
 
 Später können die Rollen vertauscht werden: Aber immer in Abstimmung mit dem Partner/der Partnerin.
-* Wie wird ein neues Spiel gestartet?
-* Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
-* Dann den Sender neu einstellen: `|Taste A+B|`
-* Erfindet selber Spielregeln dazu
-* Natürlich kann man den Micro:bit auch umprogrammieren:
+ * Wie wird ein neues Spiel gestartet?
+ * Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
+ * <hr>
+ * Dann den Sender neu einstellen: `|Taste A+B|`
+ * Erfindet selber Spielregeln dazu
+ * Natürlich kann man den Micro:bit auch umprogrammieren:
 	* Dabei ist wichtig, dass man im Team die Regeln bespricht.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NjUyMTk4MSwxNjQ3ODY1Nzk2LDE5Mj
-Q1ODg0MywtMTUwMzE3MjQyMSwtMjAzNTg1NTkxMywtMTMxMTMw
-Mjc5NF19
+eyJoaXN0b3J5IjpbLTE3ODU5Mzc2MjcsMTY0Nzg2NTc5NiwxOT
+I0NTg4NDMsLTE1MDMxNzI0MjEsLTIwMzU4NTU5MTMsLTEzMTEz
+MDI3OTRdfQ==
 -->
