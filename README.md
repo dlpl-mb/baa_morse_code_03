@@ -13,13 +13,15 @@
 		* `Taste B` bedeutet: **Nicht erkannt** - bitte noch einmal senden
 * Diese Antwort erhält der **Sender** auf sein Micro:bit Display
 
-Später können die Rollen vertauscht werden: Aber immer in Abstimmung mit dem Partner/der par.
+Später können die Rollen vertauscht werden: Aber immer in Abstimmung mit dem Partner/der Partnerin.
+* Wie wird ein neues Spiel gestartet?
+* Bei beiden Micro:bit die Resettaste (Rückseite des Micro.bit) 
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NTM2Mzc0NCwxOTI0NTg4NDMsLTE1MD
-MxNzI0MjEsLTIwMzU4NTU5MTMsLTEzMTEzMDI3OTRdfQ==
+eyJoaXN0b3J5IjpbLTE3OTIxMjQ1MjAsMTkyNDU4ODQzLC0xNT
+AzMTcyNDIxLC0yMDM1ODU1OTEzLC0xMzExMzAyNzk0XX0=
 -->
