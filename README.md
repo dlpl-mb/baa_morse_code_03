@@ -5,14 +5,18 @@
 * Nun muss abgemacht werden, wer nun bei diesem Spiel **Sender** ist:
 	* Nur der **Sender** drückt dazu beide `|Tasten A+B|` -> nun weiß das System, wer sendet und wer empfängt
 * Der **Empfänger** sollte bisher nur warten
+
+
 * Jetzt kann der **Sender** durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
 	* Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe abgeschickt werden - mit `|Taste A|`
 * Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
-	* Der **Empfänger** sieht nun das Morsezeichen findet über die Morse-Tabelle den richtigen Buchstaben und gibt Bescheid, ob der Buchstabe erkannt wurde:
+
+**Der Empfänger:**
+	* Der **Empfänger** sieht nun das Morsezeichen findet über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
 		* `|Taste A|` bedeutet: Morsezeichen **erkannt**
 		* `|Taste B|` bedeutet: **Nicht erkannt** - bitte noch einmal senden
 * Diese Antwort erhält der **Sender** auf sein Micro:bit Display
-* Macht einmal 5 Durchgänge und dann wechselt ihr die Rollen.
+* Führt einmal 5 Durchgänge durch und dann wechselt ihr die Rollen.
 
 **Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
 
@@ -27,7 +31,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTI5OTU2ODYsMTY0Nzg2NTc5NiwxOT
-I0NTg4NDMsLTE1MDMxNzI0MjEsLTIwMzU4NTU5MTMsLTEzMTEz
-MDI3OTRdfQ==
+eyJoaXN0b3J5IjpbLTY2NDQyOTUyOCwtMTc5Mjk5NTY4NiwxNj
+Q3ODY1Nzk2LDE5MjQ1ODg0MywtMTUwMzE3MjQyMSwtMjAzNTg1
+NTkxMywtMTMxMTMwMjc5NF19
 -->
