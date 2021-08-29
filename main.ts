@@ -21,7 +21,13 @@ let index = 0
 let neigung = 0
 let auswahl_morsecode = ""
 let ich_bin_sender = 0
-basic.showIcon(IconNames.Yes)
+basic.showLeds(`
+    . . # . .
+    # # # # #
+    . . # . .
+    . # . # .
+    # . . . #
+    `)
 let liste_morsecodes = [
 ".-",
 "-...",
@@ -105,10 +111,10 @@ ich_bin_sender = 0
 basic.forever(function () {
     if (ich_bin_sender == 1) {
         neigung = input.acceleration(Dimension.X)
-        if (neigung > 200) {
+        if (neigung > 250) {
             index += 1
         }
-        if (neigung < -200) {
+        if (neigung < -250) {
             index += -1
         }
         if (index > anz_bst) {
