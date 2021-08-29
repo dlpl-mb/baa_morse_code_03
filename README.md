@@ -19,12 +19,12 @@ Später können die Rollen vertauscht werden: Aber immer in Abstimmung mit dem P
 * Dann den Sender neu einstellen: `Taste A+B`
 * Erfindet selber Spielregeln dazu
 * Natürlich kann man den Micro:bit auch umprogrammieren:
-	* Dabei ist wichtig, dass man im Team die 
+	* Dabei ist wichtig, dass man im Team die Regeln bespricht.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTI4MjA0OTQsMTkyNDU4ODQzLC0xNT
-AzMTcyNDIxLC0yMDM1ODU1OTEzLC0xMzExMzAyNzk0XX0=
+eyJoaXN0b3J5IjpbLTE3OTIzNzI2NSwxOTI0NTg4NDMsLTE1MD
+MxNzI0MjEsLTIwMzU4NTU5MTMsLTEzMTEzMDI3OTRdfQ==
 -->
