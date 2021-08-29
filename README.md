@@ -1,4 +1,4 @@
-## Programmbedienung
+# Programmbedienung
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">  Sender und Empfänger <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">
 
 * Nach dem Start sehen beide Micro:bit gleich aus
@@ -28,10 +28,11 @@
 	* Dabei ist wichtig, dass man im Team die Regeln bespricht.
 
 
-
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
+# !!! Danke für eure Mitarbeit !!!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDMxMTMzMTUsLTE3OTI5OTU2ODYsMT
+eyJoaXN0b3J5IjpbLTE1ODg3MjIwNzYsLTE3OTI5OTU2ODYsMT
 Y0Nzg2NTc5NiwxOTI0NTg4NDMsLTE1MDMxNzI0MjEsLTIwMzU4
 NTU5MTMsLTEzMTEzMDI3OTRdfQ==
 -->
