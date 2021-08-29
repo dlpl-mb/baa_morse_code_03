@@ -8,10 +8,10 @@
 * Jetzt kann der **Sender** durch `Links-und-rechts-Neigen` des Micro:bit einen Buchstaben wählen
 	* Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe abgeschickt werden - mit `|Taste A|`
 * Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
-	* Der **Empfänger** sieht nun das Morsezeichen findet über die Morse-Tabelle den rnach und gibt Bescheid, ob der Buchstabe erkannt wurde:
-		* Taste A bedeutet: Morsezeichen erkannt
-		* Taste B bedeutet: Nicht erkannt - bitte noch einmal senden
-
+	* Der **Empfänger** sieht nun das Morsezeichen findet über die Morse-Tabelle den richtigen Buchstaben und gibt Bescheid, ob der Buchstabe erkannt wurde:
+		* `Taste A` bedeutet: Morsezeichen **erkannt**
+		* `Taste B` bedeutet: **Nicht erkannt** - bitte noch einmal senden
+* Diese Antwort erhält der **Sender** auf sein Micro:bit Display
 
 
 
@@ -19,6 +19,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNjI4NDI1LC0xNTAzMTcyNDIxLC0yMD
+eyJoaXN0b3J5IjpbMTkyNDU4ODQzLC0xNTAzMTcyNDIxLC0yMD
 M1ODU1OTEzLC0xMzExMzAyNzk0XX0=
 -->
