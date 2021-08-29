@@ -3,8 +3,8 @@
 
 * Nach dem Start sehen beide Micro:bit gleich aus.
 * Nun muss abgemacht werden, wer nun beim Spiel Sender ist:
-	* Dieser (der Sender) drückt beide `Tasten A+B` - jetzt weiß das System, wer sendet und wer empfängt
-	* 
+	* Dieser (der Sender) drückt beide `Tasten A+B` - nun weiß das System, wer sendet und wer empfängt
+	* Jetzt kann der Sender durch Links-und-rechts-Schwen
 	* 
 
 
@@ -31,6 +31,6 @@ Die Aktualisierung dieses Bildes kann einige Minuten dauern.
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MjM3Mjk5OSwtMTUwMzE3MjQyMSwtMj
+eyJoaXN0b3J5IjpbMjA5OTc3NzQ0NCwtMTUwMzE3MjQyMSwtMj
 AzNTg1NTkxMywtMTMxMTMwMjc5NF19
 -->
