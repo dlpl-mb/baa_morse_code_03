@@ -1,5 +1,5 @@
 ## Programmbedienung
-
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_klein.png?raw=1">
 Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
 
 * öffne [https://makecode.microbit.org/](https://makecode.microbit.org/)
@@ -27,5 +27,6 @@ Die Aktualisierung dieses Bildes kann einige Minuten dauern.
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTEzMDI3OTRdfQ==
+eyJoaXN0b3J5IjpbLTIwMzU4NTU5MTMsLTEzMTEzMDI3OTRdfQ
+==
 -->
