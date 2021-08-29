@@ -3,8 +3,15 @@
 
 * Nach dem Start sehen beide Micro:bit gleich aus.
 * Nun muss abgemacht werden, wer nun beim Spiel Sender ist:
-	* Dieser drückt 
-## Dieses Projekt bearbeiten ![Build Status Abzeichen](https://github.com/dlpl-mb/baa_morse_code_03/workflows/MakeCode/badge.svg)
+	* Dieser (der Sender) drückt beide `Tasten A+B` - jetzt weiß das System, wer sendet und wer empfängt
+	* 
+	* 
+
+
+
+
+
+
 
 Um dieses Repository in MakeCode zu bearbeiten.
 
@@ -24,6 +31,6 @@ Die Aktualisierung dieses Bildes kann einige Minuten dauern.
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjI1ODgzMSwtMTUwMzE3MjQyMSwtMj
+eyJoaXN0b3J5IjpbLTQ5MjM3Mjk5OSwtMTUwMzE3MjQyMSwtMj
 AzNTg1NTkxMywtMTMxMTMwMjc5NF19
 -->
