@@ -9,8 +9,9 @@ input.onButtonPressed(Button.AB, function () {
     ich_bin_sender = 1
 })
 radio.onReceivedString(function (receivedString) {
+    basic.clearScreen()
     basic.showString(receivedString)
-    basic.pause(200)
+    basic.pause(500)
 })
 input.onButtonPressed(Button.B, function () {
     radio.sendString("-")
