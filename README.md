@@ -12,9 +12,10 @@
 		* `|Taste A|` bedeutet: Morsezeichen **erkannt**
 		* `|Taste B|` bedeutet: **Nicht erkannt** - bitte noch einmal senden
 * Diese Antwort erhält der **Sender** auf sein Micro:bit Display
-* 
+* Macht einmal 5 Durchgänge und dann wechselt ihr die Rollen.
 
-Später können die Rollen vertauscht werden: Aber immer in Abstimmung mit dem Partner/der Partnerin.
+**Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
+
 * Wie wird ein neues Spiel gestartet?
 * Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
 * Dann den Sender neu bestimmen mit `|Taste A+B|`
@@ -26,7 +27,7 @@ Später können die Rollen vertauscht werden: Aber immer in Abstimmung mit dem P
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjQ5MTIzMjEsMTY0Nzg2NTc5NiwxOT
+eyJoaXN0b3J5IjpbLTE3OTI5OTU2ODYsMTY0Nzg2NTc5NiwxOT
 I0NTg4NDMsLTE1MDMxNzI0MjEsLTIwMzU4NTU5MTMsLTEzMTEz
 MDI3OTRdfQ==
 -->
