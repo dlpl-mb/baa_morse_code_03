@@ -6,17 +6,17 @@
 	* Nur der **Sender** drückt dazu beide `|Tasten A+B|` -> nun weiß das System, wer sendet und wer empfängt
 * Der **Empfänger** sollte bisher nur warten
 
-**Der Sender:**
+**Der Sender**
 * Jetzt kann der **Sender** durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
 	* Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe abgeschickt werden - mit `|Taste A|`
 * Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
 
-**Der Empfänger:**
-* Der **Empfänger** sieht nun das Morsezeichen findet über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
+**Der Empfänger**
+* Der **Empfänger** sieht nun das Morsezeichen und sucht über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
 	* `|Taste A|` bedeutet: Morsezeichen **erkannt**
 	* `|Taste B|` bedeutet: **Nicht erkannt** - bitte noch einmal senden
-* Diese Antwort erhält der **Sender** auf sein Micro:bit Display
-* Führt einmal 5 Durchgänge durch und dann wechselt ihr die Rollen.
+* Diese Antwort erhält der **Sender** auf sein Micro:bit Display (+ oder-)
+* Führt einmal 5 Durchgänge durch und wechselt dann ihr die Rollen.
 
 **Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
 
@@ -31,7 +31,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NzMzNDE0LC0xNzkyOTk1Njg2LDE2ND
-c4NjU3OTYsMTkyNDU4ODQzLC0xNTAzMTcyNDIxLC0yMDM1ODU1
-OTEzLC0xMzExMzAyNzk0XX0=
+eyJoaXN0b3J5IjpbLTE0NDMxMTMzMTUsLTE3OTI5OTU2ODYsMT
+Y0Nzg2NTc5NiwxOTI0NTg4NDMsLTE1MDMxNzI0MjEsLTIwMzU4
+NTU5MTMsLTEzMTEzMDI3OTRdfQ==
 -->
