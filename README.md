@@ -1,7 +1,7 @@
 
-> Diese Seite bei [https://dlpl-mb.github.io/baa_morse_code_03/](https://dlpl-mb.github.io/baa_morse_code_03/) öffnen
 
-## Als Erweiterung verwenden
+
+## Programmbedienung
 
 Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
 
