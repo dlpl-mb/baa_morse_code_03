@@ -1,4 +1,3 @@
-<style>.page-header {font-size:1rem;height:10vh;padding-top:1.5rem}</style>
 ## Geheimzeichen: Das Morse-Alphabet II
 **Hallo, ich bin Robi01 und werde dich beim Programmieren mit Micro:bit begleiten. Wir werden bei diesem Projekt nun Morsezeichen zu meiner Freundin Robi02 übertragen.**
 
@@ -60,7 +59,7 @@ Um nachher Morsecodes und Buchstaben senden zu können, müssen zwei Micro:bit d
 	})
 	radio.setGroup(99)
 ```
-[Programmcode](https://makecode.microbit.org/_3dh6h5JKqHkJ "(target|_blank)")
+[Programmcode 1](https://makecode.microbit.org/_3dh6h5JKqHkJ "(target|_blank)")
 
 * Schreibe das Programm auf eure beiden Micro:bit (oder wählt Programmcode) und macht erste Tests
 * Tausch die Rollen des Senders und Empfängers
@@ -92,7 +91,7 @@ Um nachher Morsecodes und Buchstaben senden zu können, müssen zwei Micro:bit d
 	})
 ```
 * Überlege auch warum ein leeres Feld eingebaut wurde
-* [Der Programmcode](https://makecode.microbit.org/#pub:_DVe8TrKz3cRU "(target|_blank)")
+* [Programmcode 2 ](https://makecode.microbit.org/#pub:_DVe8TrKz3cRU "(target|_blank)")
 
 Eingebaut in das Übertragungsprogramm:
 * Nun wird der Zufallsgenerator in der `Taste A-Funktion` eingebaut:
@@ -127,9 +126,8 @@ Eingebaut in das Übertragungsprogramm:
 	liste_morsecodes = [".-","-...","-.-.","-..",".","..-.","--.","...","---"]
 	anz_bst = liste_buchstaben.length - 1
 ```
-* [Der Programmcode](https://makecode.microbit.org/---codeembed#pub:_VE2dfFHrwDi9 "(target|_blank)")
+* [Programmcode 3](https://makecode.microbit.org/---codeembed#pub:_VE2dfFHrwDi9 "(target|_blank)")
 
-<hr>
 
 **Lösung b:** Wir bauen eine Auswahltastatur
 * Bei dieser Lösung arbeiten wir mit dem Neigungswinkel in Richtung x - eine sehr leistungsfähige Funktion, mit der man viele Spiele gestalten kann.
@@ -141,9 +139,19 @@ Eingebaut in das Übertragungsprogramm:
 		basic.showNumber(input.acceleration(Dimension.X))
 	})
 ```
-* Beobachte dabei die x-Werte - wir wollen diese Neigung ausnutzen, um in den Buchstaben zu `blättern`. 
-* Experimentiere mit der folgenden Funktion zum Hinauf- und Herunterzählen einer Zahl (sehr schwierig): 
 
+[Programmcode](https://makecode.microbit.org/#pub:_55zbeHhRTa2o "(target|_blank)")
+
+- Immer wenn `Taste A` gedrückt wird, zeigt es den augenblicklichen Kippwinkel (x) an. 
+- Spiele das Programm auf den Micro:bit und teste.
+- Auch dieses folgende Sequenz zeigt dir den Kippwinkel x (links-Rechts) an - aber hier werden ständig neue Winkelwerte angezeigt, dadurch entstehen sehr viele Zahlen, ...
+```blocks
+	basic.forever(function () {
+		basic.showNumber(input.acceleration(Dimension.X))
+	})
+```
+* Beobachte dabei die x-Werte - wir wollen diese Neigung ausnutzen, um später in den Buchstaben zu `blättern`. 
+* Experimentiere nun mit der folgenden Funktion zum Hinauf- und Herunterzählen einer Zahl (bitte auf den Micro.bit spielen) - hier sind bereits viele Funktionen beteiligt.
 ```blocks
 	let index = 5
 	let neigung = 0
@@ -159,178 +167,151 @@ Eingebaut in das Übertragungsprogramm:
 	    basic.pause(1000)
 	})
 ```
-[Programmcode](https://makecode.microbit.org/#pub:_DVe8TrKz3cRU "(target|_blank)")
+[Programmcode 4](https://makecode.microbit.org/#pub:_UXKHMAL1pFWp "(target|_blank)")
 
-
-
-
-
-
-
-
-Eingebaut in das Übertragungsprogramm:
-* Nun wird der Zufallsgenerator in der `Taste A-Funktion` eingebaut:
-
++ Hier lässt sich sehr gut beobachten, wie man die Sensoren (Beschleunigungs- und Lagesensor) nutzen kann, um Messwerte zu verwenden.
++ Damit sind nun die Voraussetzungen geschaffen, die Hilfstastatur (Auswahltastatur) zu testen.
+ 
 ```blocks
 	input.onButtonPressed(Button.A, function () {
-	    index = randint(0, anz_bst)
-	    auswahl_buchstabe = liste_buchstaben[index]
-	    // damit siehst du als Sender den Buchstaben auch auf deinem Display
-	    basic.showString("" + (auswahl_buchstabe))
-	    radio.sendString("" + (liste_morsecodes[index]))
-	})
-	radio.onReceivedString(function (receivedString) {
-	    // Beim Emfänger werden die empfangenen Daten angezeigt
-	    basic.showString(receivedString)
-	})
-	input.onButtonPressed(Button.B, function () {
-	    for (let index2 = 0; index2 <= anz_bst; index2++) {
-	        basic.showString("" + (liste_buchstaben[index2]))
-	        basic.showString("" + (liste_morsecodes[index2]))
-	        basic.pause(2000)
-	        basic.clearScreen()
-	    }
+	    radio.sendString("" + (auswahl_morsecode))
 	})
 	let auswahl_buchstabe = ""
 	let index = 0
-	let anz_bst = 0
-	let liste_morsecodes: string[] = []
-	let liste_buchstaben: string[] = []
-	radio.setGroup(99)
+	let neigung = 0
+	let auswahl_morsecode = ""
 	liste_buchstaben = ["A","B","C","D","E","F","G","S","O"]
 	liste_morsecodes = [".-","-...","-.-.","-..",".","..-.","--.","...","---"]
-	anz_bst = liste_buchstaben.length - 1
+	let anz_bst = liste_buchstaben.length - 1
+	basic.forever(function () {
+	    neigung = input.acceleration(Dimension.X)
+	    if (neigung > 300) {
+	        index += 1
+	    }
+	    if (neigung < -300) {
+	        index += -1
+	    }
+	    if (index > anz_bst) {
+	        index = 0
+	    }
+	    if (index < 0) {
+	        index = anz_bst
+	    }
+	    auswahl_buchstabe = liste_buchstaben[index]
+	    auswahl_morsecode = liste_morsecodes[index]
+	    basic.showString("" + (auswahl_buchstabe))
+	    basic.pause(500)
+	})
 ```
-[Programmcode](https://makecode.microbit.org/---codeembed#pub:_VE2dfFHrwDi9 "(target|_blank)")
+[Programmcode 5](https://makecode.microbit.org/---codeembed#pub:_PHiaYDfFzD83 "(target|_blank)")
++ Teste bei diesem Teilprogramm vor allem die Auswahltastatur
++ Erst wenn diese Funktionen "verdaut" sind - hat es Sinn das gesamte Programm anzusehen.
 
+## Fertiges Programm: Das Morse-Alphabet II
+Das fertige Programmgerüst enthält jetzt die wichtigsten Funktionen, damit du zu deinem Spielpartner alle Morsezeichen versenden kannst. Wenn dein Partner/deine Partner das Zeichen gelesen und verstanden hat, wird von dort mit der `Taste B` ein `+` zurückgeschickt.
 
-
-
-
-
-
-
-
-
-
-
-
-<br>
-**Verbesserungen:**
-
-* Taste A des Micro:bit zeigt die Buchstaben A bis G (Später nehmen wir alle anderen Buchstaben dazu.)
-* Taste B zeigt die Morse-Codes für diese Zeichen an 
-* Später wirst du dein Programm so ausgebauen, dass du Codes zu anderen micro:bits übertragen und somit Anderen senden kann.
-* Probiere das gleich mit dem Button "Dreieck" aus:
-<img width="40%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/dreieck.png?raw=1">
-
++ Das fertig kleine Übertragungsprogramm für alle Morsezeichen
 ```blocks
-input.onButtonPressed(Button.A, function () {
-radio.sendString(".- -. -. .-")
-})
-
-radio.onReceivedString(function (receivedString) {
-basic.showString(receivedString)
-})
-radio.setGroup(99)
+	input.onButtonPressed(Button.A, function () {
+	    radio.sendString("" + (auswahl_morsecode))
+	})
+	input.onButtonPressed(Button.AB, function () {
+	    ich_bin_sender = 1
+	})
+	radio.onReceivedString(function (receivedString) {
+	    basic.showString(receivedString)
+	})
+	input.onButtonPressed(Button.B, function () {
+	    radio.sendString("+")
+	    ich_bin_sender = 0
+	})
+	let ich_bin_sender = 0
+	let auswahl_buchstabe = ""
+	let index = 0
+	let neigung = 0
+	let auswahl_morsecode = ""
+	basic.showIcon(IconNames.Yes)
+	
+	let liste_buchstaben = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P", "Q","R","S","T","U","V","W","X","Y","Z","1","2","3","4","5","6","7","8","9","0"]
+	let liste_morsecodes = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----"]
+	
+	let anz_bst = liste_buchstaben.length - 1
+	radio.setGroup(99)
+	basic.forever(function () {
+		if (ich_bin_sender == 1) {
+		    neigung = input.acceleration(Dimension.X)
+		    if (neigung > 300) {
+		        index += 1
+		    }
+		    if (neigung < -300) {
+		        index += -1
+		    }
+		    if (index > anz_bst) {
+		        index = 0
+		    }
+		    if (index < 0) {
+		        index = anz_bst
+		    }
+		    auswahl_buchstabe = liste_buchstaben[index]
+		    auswahl_morsecode = liste_morsecodes[index]
+		    basic.showString("" + (auswahl_buchstabe))
+		    basic.pause(500)
+		}    
+	})
 ```
 
+## Reflexion und Erweiterung
+In dritten Teil diese Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen, die mit weiteren neuen Funktionen erreicht werden. Versuche nun selber Funktionen zu entdecken und zu testen - es werden im dritten Teil nur mehr wenige Kommentare gegeben.
++ Überlege, welche Erweiterungen/Vereinfachung du hier noch machen möchtest:
++ Man könnte mit mehreren Empfängern kommunizieren.
 
-```blocks
-input.onButtonPressed(Button.A, () => { 
-    basic.showString("A");
-});
+**Viel Erfolg auf dem Weg zur kompetenten Programmiererin/zum kompetenten Programmierer.**
 
-input.onButtonPressed(Button.B, () => { 
-    basic.showString(".-");
-});
-```
-* Schreib nun im Programmeditor (Button **Blöcke**) die kurzen Programme für die anderen Buchstaben B bis G.
-* Der Sender darf erst dann wieder senden, wenn er/sie vom Empfänger eine Bestätigungsantwort erhalten hat.
-## Programm 2: Alle sechs Buchstaben in ein Programm
+**Abschlussbemerkung:**
+Der Autor dieses Morse-Beispielprogramms ist selbst seit Jahren Programmierer in einigen Programmiersprachen und kann feststellen, dass er dann am meisten gelernt hat, wenn er fremde Programme analysiert hat und versucht hat, sie zu verstehen und mit kleinen schrittweisen Änderungen alles Unbekannte zu verstehen.
 
-Zugegeben: Das war ganz schön aufwändig, für jeden Buchstaben immer ein eigenes Programm zu schreiben.
-Wir packen nun alles 7 Buchstaben in ein Programm:
-* Wir müssen alle sieben Buchtaben in eine Liste hinein bringen
-* Dazu gibt es einen besonderen Variablentyp **Array** oder **Liste** 
-* Wähle unter ``|Fortgeschritten Arrays|`` und dort ``||array:setze Text_List ...||``
-* Ändere den Variablen auf Buchstabenliste
-* Vervollständige die Buchstaben von "A" bis "G"
+**Neue Funktionen werden sein:**
++ Erweiterte Kommunikation zwischen Sender und Empfänger
++ Senden von ganzen Wörtern
++ Senden von akustischen Signalen
 
-### Speicherung der Buchstaben 
-
-* Um auf ein Element dieser Liste zuzugreifen, muss du den **Index** (Reihungsnummer ) innerhalb der liste angeben.
-* Beachte: Eine Liste beginnt in fast allen Programmiersprachen immer mit dem Element Nr. 0, dann 1 bis zum letzten element, das hat dann die Nummer 6 (unsere Liste von A bis G). Das ist sicher sehr gewöhnungsbedürftig - man sollte sich das möglichst schnell angewöhnen und anwenden. 
-
-### Darstellung der Buchstaben 
-
-* Wir benötigen eine Schleife von 0 bis 6
-* Innerhalb der Schleife zeigen wir mit einer **Laufvariable** - wir nennen sie hier **index** auf jeweils ein Element.
+## [Der fertige Programmcode](https://makecode.microbit.org/---codeembed#pub:_8tqijz37gTMw "(target|_blank)")
 
 
-## Fertiges Programm: Morse-Alphabet II
-Du kannst nun am folgenden fertigen Programms noch experimentiert. 
-* Verändere Variable und Zeiten
-* Beim Experimentieren an fremden Programmen kannst du viel lernen 
 
-```blocks
-input.onButtonPressed(Button.A, function () {
-    for (let index = 0; index <= anz_bst; index++) {
-        basic.showString("" + (liste_buchstaben[index]))
-        basic.pause(500)
-    }
-})
-input.onButtonPressed(Button.B, function () {
-    for (let index2 = 0; index2 <= anz_bst; index2++) {
-        basic.showString("" + (liste_buchstaben[index2]))
-        basic.showString("" + (liste_morsecodes[index2]))
-        basic.pause(2000)
-        basic.clearScreen()
-    }
-})
-let anz_bst = 0
-let liste_morsecodes: string[] = []
-let liste_buchstaben: string[] = []
-basic.showIcon(IconNames.Yes)
-liste_buchstaben = [
-"A",
-"B",
-"C",
-"D",
-"E",
-"F",
-"G"
-]
-liste_morsecodes = [
-".-",
-"-...",
-"-.-.",
-"-..",
-".",
-"..-.",
-"--."
-]
-anz_bst = liste_buchstaben.length - 1
-```
-#### Metadaten
+## Programmbedienung
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">  Sender und Empfänger <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">
+
+* Nach dem Start sehen beide Micro:bit gleich aus
+* Nun muss abgemacht werden, wer nun bei diesem Spiel **Sender** ist:
+	* Nur der **Sender** drückt dazu beide `|Tasten A+B|` -> nun weiß das System, wer sendet und wer empfängt
+* Der **Empfänger** sollte bisher nur warten
+
+**Der Sender**
+* Jetzt kann der **Sender** durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
+	* Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe abgeschickt werden - mit `|Taste A|`
+* Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
+
+**Der Empfänger**
+* Der **Empfänger** sieht nun das Morsezeichen und sucht über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
+	* `|Taste A|` bedeutet: Morsezeichen **erkannt**
+	* `|Taste B|` bedeutet: **Nicht erkannt** - bitte noch einmal senden
+* Diese Antwort erhält der **Sender** auf sein Micro:bit Display (+ oder-)
+* Führt einmal 5 Durchgänge durch und wechselt dann ihr die Rollen.
+
+**Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
+
+* Wie wird ein neues Spiel gestartet?
+* Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
+* Dann den Sender neu bestimmen mit `|Taste A+B|`
+* Erfindet selber neue Spielregeln dazu
+* Natürlich kann man den Micro:bit auch umprogrammieren:
+	* Dabei ist wichtig, dass man im Team die Regeln bespricht.
+
+
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
+# !!! Danke für eure Mitarbeit !!!
+
+#### Technische Metadaten
+<style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}</style>
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
-
-
-
-> Diese Seite bei [https://dlpl-mb.github.io/baa_morse_code_02/](https://dlpl-mb.github.io/baa_morse_code_02/) öffnen
-
-> Öffne das Teilprogramm [Programmabschnitt](https://makecode.microbit.org/#pub:_Ux2V81PmkYMM)
-
-<a href="https://makecode.microbit.org/#pub:_Ux2V81PmkYMM" target="_blank">Hello, world!</a>
-
-
-
-[Test mit Blanklink funktionierend](https://makecode.microbit.org/_buWXjXMYkKop){:target="_blank"}
-
-[Test mit neulink2](https://makecode.microbit.org/#pub:_Ux2V81PmkYMM){target="_blank"}
-
-[Link 4](https://makecode.microbit.org/#pub:_Ux2V81PmkYMM "title" target="_blank")
-
-[Go to this page](https://makecode.microbit.org/#pub:_Ux2V81PmkYMM?target=_blank)
-
-[Page Link](https://makecode.microbit.org/#pub:_Ux2V81PmkYMM "(target|_blank)")
