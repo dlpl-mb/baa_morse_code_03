@@ -32,8 +32,12 @@
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 # !!! Danke für eure Mitarbeit !!!
 
+#### Technische Metadaten
+<style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}</style>
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEyOTcyMjE0LC0xNTg4NzIyMDc2LC0xNz
-kyOTk1Njg2LDE2NDc4NjU3OTYsMTkyNDU4ODQzLC0xNTAzMTcy
-NDIxLC0yMDM1ODU1OTEzLC0xMzExMzAyNzk0XX0=
+eyJoaXN0b3J5IjpbLTIxMTU4Mzk2NjksNDEyOTcyMjE0LC0xNT
+g4NzIyMDc2LC0xNzkyOTk1Njg2LDE2NDc4NjU3OTYsMTkyNDU4
+ODQzLC0xNTAzMTcyNDIxLC0yMDM1ODU1OTEzLC0xMzExMzAyNz
+k0XX0=
 -->
