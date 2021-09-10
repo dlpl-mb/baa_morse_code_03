@@ -1,10 +1,12 @@
-# Überblick und Bedienung
+# Überblick und Bedienung xxx
+
 ## Programmbedienung
+
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">  Sender und Empfänger <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">
 
 * Nach dem Start sehen beide Micro:bit gleich aus
 * Nun muss abgemacht werden, wer nun bei diesem Spiel **Sender** ist:
-	* Nur der **Sender** drückt dazu beide `|Tasten A+B|` -> nun weiß das System, wer sendet und wer empfängt
+  * Nur der **Sender** drückt dazu beide `|Tasten A+B|` -> nun weiß das System, wer sendet und wer empfängt
 * Der **Empfänger** sollte bisher nur warten
 
 **Der Sender**
