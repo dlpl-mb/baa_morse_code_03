@@ -28,9 +28,9 @@ basic.forever(function () {
 ```
 
 * Die Neigung des Micro:bit kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links
-* Mit diesen Zahlen ist es möglich festzustellen in welche Richtung der Micro:bit geneigt wurde
-* In unserem Programm nützen wir diese Eigenschaft: Ein leichte Neigung ab 300 addiert dem Zähler (Zeiger auf die Buchstabenliste) um eines hoch (Rechtsneigung) oder vermindert um 1 wird (bei Linksneigung).
-* Dies wird ständig mit der Funktion "Dauerhaft" überprüft
+* Mit diesen Zahlen ist es möglich, festzustellen in welche Richtung der Micro:bit geneigt wurde
+* In unserem Programm nützen wir diese Eigenschaft: Ein leichte Neigung ab 300 (nach rechts) addiert den Zähler (Zeiger auf die Buchstabenliste) um eines hoch (Rechtsneigung) oder vermindert um 1 wird (bei Linksneigung).
+* Dies wird ständig in der Funktion "Dauerhaft" überprüft
 * Test nun ausgeibig diese Funktion und verscuhe auch kleine Veränderungen durchzuführen
 
 [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_g2rPdfcgsLxj)
@@ -39,9 +39,16 @@ basic.forever(function () {
 * Probiert dieses Programm aus
 * Hier verwendet man die Variable Index und zählt diese hinauf, wenn der Micro:bit nach rechts geneigt wird
 
+### Morsecode auswählen
 
-* Mit diesem Programmteil kann man zwar den Buchstaben wählen, aber muss ja den Morsecode dazu finden
+* Mit diesem Programmteil kann man zwar den Buchstaben wählen, aber muss ja noch den passenden Morsecode dazu finden
+* Dazu nimmt man den Zeiger (index) auf die Buchstabenliste und holt sich den Morsecode aus der **liste_morse_codes**
 
+[Programmcode: Morsecode vom Buchstaben](https://makecode.microbit.org/#pub:_HUfdjC3RAdvV)
+
+Damit ist nun alles fertig, um das gesamte Programm dieser Version fertig zustellen. Es geht jetzt nur mehr um die Übertragung der Morsecodes an den Empfänger.
+
+[Das fertige Programm "Neigungstastatur"](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
 
 
 * Kommentare zu dieser Version:
