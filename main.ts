@@ -2,7 +2,7 @@ input.onButtonPressed(Button.A, function () {
     if (ich_bin_sender == 1) {
         radio.sendString("" + (auswahl_morsecode))
     } else {
-        radio.sendString("+")
+        radio.sendString("ok")
     }
 })
 input.onButtonPressed(Button.AB, function () {
@@ -14,7 +14,7 @@ radio.onReceivedString(function (receivedString) {
     basic.pause(500)
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("-")
+    radio.sendString("no")
     ich_bin_sender = 0
 })
 let auswahl_buchstabe = ""
