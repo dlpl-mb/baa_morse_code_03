@@ -10,20 +10,25 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 ## Erweiterung 3: "Eine Tastatur zum Auswählen der Buchstaben"
 
 * Statt dem zufälligen Auswählen eines Morsezeichens, wollen wir mir Hilfe einer "Tastatur" die Sende-Buchstaben auswählen können
-* Das wird keien rihcitge Tastatur sein, aber eine Möglichkeit der Auswahl eines Buchstabes
-* Überlege: Wie kann man mit der Sensorik des Micro:bit ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung?
+* Dabei wird zwar keine richtige Tastatur ersetzen, aber eine Möglichkeit zur Auswahl eines Buchstabes
+* Überlege: Wie kann man mit der Sensorik des Micro:bit ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung? Welche Werte bekomme ich vom Micro:bit geliefert?
 
-<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">
+<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">
 
-### Wir arbeiten mit dem Neigungsmesser (Beschleunigsmesser)
+### Wir arbeiten mit dem Neigungsmesser (Beschleunigungssmesser)
 
-* Dieser hat drei Kipprichtungen, x, y und z. Wir verwenden die Richtung X, das heißt Neigung rechts-links
-* Teste das mit folgender Funktion ```block basic.showNumber(input.acceleration(Dimension.X))```
-* Die Neigung kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links
-* Mit diesen Zahlen kann man nun feststellen in welche Richtung der Micro:bit geneigt wurde
-* In unserem Programm nimmt man eine leichte Neigung ab 300 an, sodass der Zähler (index) um eines hochgezählt (Rechtsneigung) oder vermindert wird (bei Linksneigung).
-* Dies wird ständig mit  der Funktion "Dauerhaft" überprüft.
+* Dieser hat drei Kipprichtungen, x, y und z. Wir verwenden die Richtung x, das bedeutet Neigung `rechts-links`
+* Teste das mit folgender Funktion 
 
+```block
+	basic.showNumber(input.acceleration(Dimension.X))
+```
+
+* Die Neigung des Micro:bit kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links
+* Mit diesen Zahlen ist es möglich festzustellen in welche Richtung der Micro:bit geneigt wurde
+* In unserem Programm nützen wir diese Eigenschaft: Ein leichte Neigung ab 300 addiert dem Zähler (Zeiger auf die Buchstabenliste) um eines hoch (Rechtsneigung) oder vermindert um 1 wird (bei Linksneigung).
+* Dies wird ständig mit der Funktion "Dauerhaft" überprüft
+* Test nun ausgeibig diese Funktion und verscuhe auch kleine Veränderungen durchzuführen
 
 * [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
 
