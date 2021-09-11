@@ -117,7 +117,6 @@ Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zuste
 
 <hr>
 
-
 ### Aufgaben des Senders
 
 * [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
