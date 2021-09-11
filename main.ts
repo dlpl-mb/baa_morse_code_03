@@ -112,10 +112,10 @@ ich_bin_sender = 0
 basic.forever(function () {
     if (ich_bin_sender == 1) {
         neigung = input.acceleration(Dimension.X)
-        if (neigung > 250) {
+        if (neigung > 300) {
             index += 1
         }
-        if (neigung < -250) {
+        if (neigung < -300) {
             index += -1
         }
         if (index > anz_bst) {
