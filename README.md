@@ -50,6 +50,7 @@ Damit ist nun alles fertig, um das gesamte Programm dieser Version fertig zustel
 
 [Das fertige Programm "Neigungstastatur"](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
 
+<hr>
 
 * Kommentare zu dieser Version:
   * Beide Micro:bit haben dasselbe Programm aufgespielt
