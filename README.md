@@ -1,17 +1,9 @@
-# Der Weg zum/zur professionellen Programmier-/in
+# Programmieren advanced
 
 In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keien Grenzen gesetzt, was man noch an Funktion weiterbauen kann.
 Programmieren lernt man nur durch Untersuchen, Verbessern, Fehler beseitigen und Testne von neuen Ideen und Funktionen.
 
-Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr genau kommentiert und besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allerbesten. 
-
-## Überlegung 1: Senden von akustischen Signalen
-
-* Statt den optischen Signalen werden jetzt kurz und lagne töne gesendet.
-
-## Überlegung 2: Senden von Lichtsignalen
-
-* Statt den optischen Signalen werden jetzt kurz und lagne töne gesendet.
+Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr genau kommentiert und besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allerbesten.
 
 ## Überlegung 3: "Eine Tastatur zum Auswählen der Buchstaben"
 
@@ -21,7 +13,56 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">  Sender und Empfänger <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">
 
-## [Programmcode: Neigungstatatur](https://makecode.microbit.org/---codeembed#pub:_8tqijz37gTMw){:target="_blank"}
+## [Programmcode: Neigungstatatur](https://makecode.microbit.org/#pub:_8tqijz37gTMw){:target="_blank"}
+
+* Kommentare zu dieser Version:
+  * Beide Micro:bit haben wieder dasselbe Programm aufgespielt
+  * Daher muss muss festgelegt werden, wer Sender und wer Empänger ist
+  * Durchführung: Nur der **Sender** drückt dazu beide `|Tasten A+B|`
+  * Nun "weiß" das System, wer sendet und wer empfängt
+  * Der **Empfänger** sollte bisher nur warten
+
+### Aufgabe des Senders
+
+* Jetzt kann der **Sender** durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
+  * Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe mit `|Taste A|` abgeschickt werden
+* Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
+
+### Aufgabe des Empfängers
+
+* Der **Empfänger** sieht nun das Morsezeichen und sucht über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen als Beweis auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
+  * `|Taste A|` sendet ein 'ok': Morsezeichen **erkannt**
+  * `|Taste B|` sendet ein 'no': **Nicht erkannt** - "bitte noch einmal senden"
+* Diese Antwort erhält der **Sender** auf sein Micro:bit-Display ('ok' oder 'no')
+* Probiert es einmal 5 Durchgänge und wechselt dann ihr die Rollen.
+* Sehr auch auch den Programmcode auf dem Computerbildschirm an
+* Es ist ganz besonders auf die Abmachungen zu achten: Computer funktionieren  nur so, indem klare Regeln erstellt und eingehalten werden.
+
+**Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
+
+* Wie wird ein neues Spiel gestartet?
+* Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
+* Dann den Sender NEU bestimmen mit `|Taste A+B|`, ... es geht los
+* Erfindet selber neue Spielregeln dazu
+* Wer sich schon viel mit Micro.bit beschäftig hat, kann dann auch versuchen den Micro:bit umprogrammieren:
+  * Dabei ist wichtig, dass man im Team immer die Regeln bespricht.
+
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
+
+
+
+
+
+
+
+
+## Überlegung 1: Senden von akustischen Signalen
+
+* Statt den optischen Signalen werden jetzt kurz und lange Töne gesendet.
+
+## Überlegung 2: Senden von Lichtsignalen
+
+* Statt den optischen Signalen werden jetzt kurz und lagne töne gesendet.
 
 
 
@@ -35,30 +76,6 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
   * Nur der **Sender** drückt dazu beide `|Tasten A+B|` -> nun weiß das System, wer sendet und wer empfängt
 * Der **Empfänger** sollte bisher nur warten
 
-### Der Sender
-
-* Jetzt kann der **Sender** durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
-  * Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe abgeschickt werden - mit `|Taste A|`
-* Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
-
-### Der Empfänger
-
-* Der **Empfänger** sieht nun das Morsezeichen und sucht über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
-  * `|Taste A|` bedeutet: Morsezeichen **erkannt**
-  * `|Taste B|` bedeutet: **Nicht erkannt** - bitte noch einmal senden
-* Diese Antwort erhält der **Sender** auf sein Micro:bit Display (+ oder-)
-* Führt einmal 5 Durchgänge durch und wechselt dann ihr die Rollen.
-
-**Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
-
-* Wie wird ein neues Spiel gestartet?
-* Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
-* Dann den Sender neu bestimmen mit `|Taste A+B|`
-* Erfindet selber neue Spielregeln dazu
-* Natürlich kann man den Micro:bit auch umprogrammieren:
-  * Dabei ist wichtig, dass man im Team die Regeln bespricht.
-
-<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 # !!! Danke für eure Mitarbeit !!!
 
 <style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}</style>
