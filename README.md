@@ -9,26 +9,47 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 
 ## Erweiterung 3: "Eine Tastatur zum Auswählen der Buchstaben"
 
-* Statt dem zufälligen Auswählen von Morsezeichen, wollen wir mti Hilfe einer Tastatur die zu sendenden Buchstaben auswählen
-* Auf dem Elektronikmarkt gibt es eine einfache Tastatur zum eingeben der Buchstaben, aber: Wir wollen mit den Möglichkeitne des Micro:bit eine Auswahlmöglichkeit schaffen.
-* Überlegung: Wie kann man mit der Sensorik des Micro:ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung?
+* Statt dem zufälligen Auswählen eines Morsezeichens, wollen wir mir Hilfe einer "Tastatur" die Sende-Buchstaben auswählen können
+* Das wird keien rihcitge Tastatur sein, aber eine Möglichkeit der Auswahl eines Buchstabes
+* Überlege: Wie kann man mit der Sensorik des Micro:bit ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung?
 
-<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">  Sender und Empfänger <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">
 
-## [Programmcode: Neigungstatatur](https://makecode.microbit.org/#pub:_8tqijz37gTMw){:target="_blank"}
+### Wir arbeiten mit dem Neigungsmesser (auch B)
+* Teste das mit folgender Funktion ```block basic.showNumber(input.acceleration(Dimension.X))```
+
+
+* [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
+
+* Jetzt kann man durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
+* Probiert dieses Programm aus
+* Hier verwendet man die Variable Index und zählt diese hinauf, wenn der Micro:bit nach rechts geneigt wird
+* Die Neigung kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links:
+
+* Mit diesem Programmteil kann man zwar den Buchstaben wählen, aber muss ja den Morsecode dazu finden
+
+
 
 * Kommentare zu dieser Version:
-  * Beide Micro:bit haben wieder dasselbe Programm aufgespielt
-  * Daher muss muss festgelegt werden, wer Sender und wer Empänger ist
-  * Durchführung: Nur der **Sender** drückt dazu beide `|Tasten A+B|`
-  * Nun "weiß" das System, wer sendet und wer empfängt
+  * Beide Micro:bit haben dasselbe Programm aufgespielt
+  * Daher muss entschieden werden, wer Sender und wer Empänger ist
+    * Durchführung: Nur der **Sender** drückt dazu beide `|Tasten A+B|`
+    * Nun "weiß" das System, wer sendet und wer empfängt
   * Der **Empfänger** sollte bisher nur warten
 
-### Aufgabe des Senders
+### Aufgaben des Senders
 
-* Jetzt kann der **Sender** durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
+* [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
+* 
   * Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe mit `|Taste A|` abgeschickt werden
 * Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
+
+## [Programmcode: Neigungstastatur](https://makecode.microbit.org/#pub:_8tqijz37gTMw){:target="_blank"}
+
+
+## [Programmcode: Neigungstastatur](https://makecode.microbit.org/#pub:_8tqijz37gTMw){:target="_blank"}
+
+
 
 ### Aufgabe des Empfängers
 
