@@ -1,22 +1,34 @@
-# Überblick und Bedienung xxx
+# Der Weg zum/zur professionellen Programmier-/in
 
-**Viel Erfolg auf dem Weg zur kompetenten Programmiererin/zum kompetenten Programmierer.**
+In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keien Grenzen gesetzt, was man noch an Funktion weiterbauen kann.
+Programmieren lernt man nur durch Untersuchen, Verbessern, Fehler beseitigen und Testne von neuen Ideen und Funktionen.
 
-**Abschlussbemerkung:**
-Der Autor dieses Morse-Beispielprogramms ist selbst seit Jahren Programmierer in einigen Programmiersprachen und kann feststellen, dass er dann am meisten gelernt hat, wenn er fremde Programme analysiert hat und versucht hat, sie zu verstehen und mit kleinen schrittweisen Änderungen alles Unbekannte zu verstehen.
+Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr genau kommentiert und besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allerbesten. 
 
-**Neue Funktionen werden sein:**
-* Erweiterte Kommunikation zwischen Sender und Empfänger
-* Senden von ganzen Wörtern
-* Senden von akustischen Signalen
+## Überlegung 1: Senden von akustischen Signalen
 
-## [Der fertige Programmcode](https://makecode.microbit.org/---codeembed#pub:_8tqijz37gTMw){:target="_blank"}
+* Statt den optischen Signalen werden jetzt kurz und lagne töne gesendet.
 
-<br>
+## Überlegung 2: Senden von Lichtsignalen
+
+* Statt den optischen Signalen werden jetzt kurz und lagne töne gesendet.
+
+## Überlegung 3: "Eine Tastatur zum Auswählen der Buchstaben"
+
+* Statt dem zufälligen Auswählen von Morsezeichen, wollen wir mti Hilfe einer Tastatur die zu sendenden Buchstaben auswählen
+* Auf dem Elektronikmarkt gibt es eine einfache Tastatur zum eingeben der Buchstaben, aber: Wir wollen mit den Möglichkeitne des Micro:bit eine Auswahlmöglichkeit schaffen.
+* Überlegung: Wie kann man mit der Sensorik des Micro:ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung?
+
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">  Sender und Empfänger <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">
+
+## [Programmcode: Neigungstatatur](https://makecode.microbit.org/---codeembed#pub:_8tqijz37gTMw){:target="_blank"}
+
+
+
+
 
 ## Programmbedienung
 
-<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">  Sender und Empfänger <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robi_mb.png?raw=1">
 
 * Nach dem Start sehen beide Micro:bit gleich aus
 * Nun muss abgemacht werden, wer nun bei diesem Spiel **Sender** ist:
@@ -322,3 +334,25 @@ In dritten Teil diese Projektes werden nun einzelne Erweiterungen  und Verbesser
 * Überlege, welche Erweiterungen/Vereinfachung du hier noch machen möchtest
 * Man könnte mit mehreren Empfängern kommunizieren.
 
+
+
+
+**Abschlussbemerkung:**
+Der Autor dieses Morse-Beispielprogramms ist selbst seit Jahren Programmierer in einigen Programmiersprachen und kann feststellen, dass er dann am meisten gelernt hat, wenn er fremde Programme analysiert hat und versucht hat, sie zu verstehen und mit kleinen schrittweisen Änderungen alles Unbekannte zu verstehen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}</style>
+<script src="https://makecode.com/gh-pages-embed.js"></script>
+<script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
