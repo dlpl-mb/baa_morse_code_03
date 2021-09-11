@@ -1,3 +1,7 @@
+<style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}
+img [alt='Kippen des Micro:bit'] {width:20%}
+</style>
+
 # Programmieren advanced
 
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
@@ -12,8 +16,12 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 * Statt dem zufälligen Auswählen eines Morsezeichens, wollen wir mir Hilfe einer "Tastatur" die Sende-Buchstaben auswählen können
 * Dabei wird zwar keine richtige Tastatur ersetzen, aber eine Möglichkeit zur Auswahl eines Buchstabes
 * Überlege: Wie kann man mit der Sensorik des Micro:bit ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung? Welche Werte bekomme ich vom Micro:bit geliefert?
+* ![Kippen des Micro:bit](https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/microbit-kippen.gif?raw=1)
 
-<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">
+
+ssss
+
+<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/microbit-kippen.gif?raw=1">
 
 ### Wir arbeiten mit dem Neigungsmesser (Beschleunigungssmesser)
 
@@ -434,6 +442,14 @@ Der Autor dieses Morse-Beispielprogramms ist selbst seit Jahren Programmierer in
 
 
 
-<style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}</style>
+<style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}
+img [alt='Kippen des Micro:bit'] {width:20%}
+</style>
 <script src="https://makecode.com/gh-pages-embed.js"></script>
 <script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+(setq markdown-xhtml-header-content
+      "<style type='text/css'>
+a { text-decoration: underline red; }
+a:hover { text-decoration: strike; }
+</style>")
