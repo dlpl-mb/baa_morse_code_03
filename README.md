@@ -447,9 +447,3 @@ img [alt='Kippen des Micro:bit'] {width:20%}
 </style>
 <script src="https://makecode.com/gh-pages-embed.js"></script>
 <script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
-
-(setq markdown-xhtml-header-content
-      "<style type='text/css'>
-a { text-decoration: underline red; }
-a:hover { text-decoration: strike; }
-</style>")
