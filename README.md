@@ -7,7 +7,7 @@ Programmieren lernt man besonders gut durch Untersuchen, Verbessern, Fehler bese
 
 Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr so genau besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allermeisten.
 
-## Erweiterung 1: Senden von akustischen Signalen
+# Erweiterung 1: Senden von akustischen Signalen
 
 * Statt den optischen Zeichen werden jetzt kurze und lange Töne gesendet.
 * Sobald ein Morsecode gewählt ist, sollten das Zeichen Punkt einen kurzen Ton erzeugen und der Strich einen langen Ton
