@@ -1,11 +1,13 @@
 # Programmieren advanced
 
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
+
 In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keien Grenzen gesetzt, was man noch an Funktion weiterbauen kann.
 Programmieren lernt man nur durch Untersuchen, Verbessern, Fehler beseitigen und Testne von neuen Ideen und Funktionen.
 
 Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr genau kommentiert und besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allerbesten.
 
-## Überlegung 3: "Eine Tastatur zum Auswählen der Buchstaben"
+## Erweiterung 3: "Eine Tastatur zum Auswählen der Buchstaben"
 
 * Statt dem zufälligen Auswählen von Morsezeichen, wollen wir mti Hilfe einer Tastatur die zu sendenden Buchstaben auswählen
 * Auf dem Elektronikmarkt gibt es eine einfache Tastatur zum eingeben der Buchstaben, aber: Wir wollen mit den Möglichkeitne des Micro:bit eine Auswahlmöglichkeit schaffen.
@@ -47,7 +49,6 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 * Wer sich schon viel mit Micro.bit beschäftig hat, kann dann auch versuchen den Micro:bit umprogrammieren:
   * Dabei ist wichtig, dass man im Team immer die Regeln bespricht.
 
-<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
 
 
@@ -56,13 +57,33 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 
 
 
-## Überlegung 1: Senden von akustischen Signalen
+## Erweiterung 1: Senden von akustischen Signalen
+
+### Anzeige auf dem eigenen Micro:bit
 
 * Statt den optischen Signalen werden jetzt kurz und lange Töne gesendet.
+* Sobald ein Morsecode gewählt ist, sollten die zeichen Punkt einen kurzen Ton erzeugen und der Strich einen langen Ton
+* Erreichen kann man das, indem man eine Musiknote kurz oder lang spielt.
+* [Programmcode: Tonsignal](https://makecode.microbit.org/#pub:_8tqijz37gTMw){:target="_blank"}  
 
-## Überlegung 2: Senden von Lichtsignalen
+### Übertragen an den Partner-Micro:bit
 
-* Statt den optischen Signalen werden jetzt kurz und lagne töne gesendet.
+
+
+
+
+
+
+
+
+
+
+
+
+## Erweiterung 2: Senden von Lichtsignalen
+
+* Statt den optischen Signalen werden jetzt kurz und lange töne gesendet.
+* Es werden dabei natürlich auch wieder nur Signale 
 
 
 
