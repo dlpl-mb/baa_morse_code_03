@@ -49,7 +49,7 @@ Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nic
   * ob ein Leerzeichen (Wortende) vorkommt: dann wird eine Pause gemacht
 
 * [Programmcode: Morsezeichen als Lichtsignalen](https://makecode.microbit.org/#pub:_dsJhEK2q6b1q){:target="_blank"}  
-* Tainiert etwas mit diesem Programm - das hört sich schon mehr nach Morsezeichen an. 
+* Analysiert und ändert dieses Programm.
 
 <hr>
 
