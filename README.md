@@ -1,6 +1,6 @@
 # Programmieren advanced
 
-<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
+<img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
 In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keien Grenzen gesetzt, was man noch an Funktion weiterbauen kann.
 Programmieren lernt man nur durch Untersuchen, Verbessern, Fehler beseitigen und Testne von neuen Ideen und Funktionen.
@@ -15,8 +15,14 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">
 
-### Wir arbeiten mit dem Neigungsmesser (auch B)
+### Wir arbeiten mit dem Neigungsmesser (Beschleunigsmesser)
+
+* Dieser hat drei Kipprichtungen, x, y und z. Wir verwenden die Richtung X, das heißt Neigung rechts-links
 * Teste das mit folgender Funktion ```block basic.showNumber(input.acceleration(Dimension.X))```
+* Die Neigung kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links
+* Mit diesen Zahlen kann man nun feststellen in welche Richtung der Micro:bit geneigt wurde
+* In unserem Programm nimmt man eine leichte Neigung ab 300 an, sodass der Zähler (index) um eines hochgezählt (Rechtsneigung) oder vermindert wird (bei Linksneigung).
+* Dies wird ständig mit  der Funktion "Dauerhaft" überprüft.
 
 
 * [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
@@ -24,7 +30,7 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 * Jetzt kann man durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
 * Probiert dieses Programm aus
 * Hier verwendet man die Variable Index und zählt diese hinauf, wenn der Micro:bit nach rechts geneigt wird
-* Die Neigung kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links:
+
 
 * Mit diesem Programmteil kann man zwar den Buchstaben wählen, aber muss ja den Morsecode dazu finden
 
