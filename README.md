@@ -40,7 +40,7 @@ Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nic
 
 ### Empfängernachricht analysieren
 
-<img width="100%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umsetzung_licht.png?raw=1">
+<img width="80%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umsetzung_licht.png?raw=1">
 
 * Hierbei muss das empfangene Morsezeichen (receiveString) zerlegt und untersucht werden
 * Es wird eine Schleife durch alle Buchstaben gestartet und gefragt, 
