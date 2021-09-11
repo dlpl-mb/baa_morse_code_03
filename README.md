@@ -1,25 +1,30 @@
-<style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}
-img [alt='Kippen des Micro:bit'] {width:20%}
-</style>
-
 # Programmieren advanced
 
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
-In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keien Grenzen gesetzt, was man noch an Funktion weiterbauen kann.
-Programmieren lernt man nur durch Untersuchen, Verbessern, Fehler beseitigen und Testne von neuen Ideen und Funktionen.
+In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keine mehr Grenzen gesetzt, wie und was man noch an Funktion einbauen kann.
+Programmieren lernt man besonders gut durch Untersuchen, Verbessern, Fehler beseitigen und Testen von neuen Ideen und Funktionen. Aber auch fremde Programm zerlegen und verändern ist ein gute Methode neues zu erfahren.
 
-Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr genau kommentiert und besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allerbesten.
+Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr so genau besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allermeisten.
+
+## Erweiterung 1: Senden von akustischen Signalen
+
+### Anzeige auf dem eigenen Micro:bit
+
+* Statt den optischen Signalen werden jetzt kurze und lange Töne gesendet.
+* Sobald ein Morsecode gewählt ist, sollten das Zeichen Punkt einen kurzen Ton erzeugen und der Strich einen langen Ton
+* Erreichen kann man das, indem man eine Musiknote kurz oder lang spielt.
+* [Programmcode: Tonsignal](https://makecode.microbit.org/#pub:_8tqijz37gTMw){:target="_blank"}  
+
+
+
+
 
 ## Erweiterung 3: "Eine Tastatur zum Auswählen der Buchstaben"
 
 * Statt dem zufälligen Auswählen eines Morsezeichens, wollen wir mir Hilfe einer "Tastatur" die Sende-Buchstaben auswählen können
 * Dabei wird zwar keine richtige Tastatur ersetzen, aber eine Möglichkeit zur Auswahl eines Buchstabes
 * Überlege: Wie kann man mit der Sensorik des Micro:bit ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung? Welche Werte bekomme ich vom Micro:bit geliefert?
-* ![Kippen des Micro:bit](https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/microbit-kippen.gif?raw=1)
-
-
-ssss
 
 <img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/microbit-kippen.gif?raw=1">
 
@@ -35,7 +40,7 @@ basic.forever(function () {
 })
 ```
 
-* Die Neigung des Micro:bit kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links
+* Die Neigung des Micro:bit kann man messen von 0 bis 1023 (nach rechts) und von (0 bis -1023) nach links
 * Mit diesen Zahlen ist es möglich, festzustellen in welche Richtung der Micro:bit geneigt wurde
 * In unserem Programm nützen wir diese Eigenschaft: Ein leichte Neigung ab 300 (nach rechts) addiert den Zähler (Zeiger auf die Buchstabenliste) um eines hoch (Rechtsneigung) oder vermindert um 1 wird (bei Linksneigung).
 * Dies wird ständig in der Funktion "Dauerhaft" überprüft
@@ -54,7 +59,7 @@ basic.forever(function () {
 
 [Programmcode: Morsecode vom Buchstaben](https://makecode.microbit.org/#pub:_HUfdjC3RAdvV)
 
-Damit ist nun alles fertig, um das gesamte Programm dieser Version fertig zustellen. Es geht jetzt nur mehr um die Übertragung der Morsecodes an den Empfänger.
+Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zustellen. Es geht jetzt nur mehr um die Übertragung der Morsecodes an den Empfänger.
 
 [Das fertige Programm "Neigungstastatur"](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
 
