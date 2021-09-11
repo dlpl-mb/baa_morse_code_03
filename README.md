@@ -20,8 +20,11 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 * Dieser hat drei Kipprichtungen, x, y und z. Wir verwenden die Richtung x, das bedeutet Neigung `rechts-links`
 * Teste das mit folgender Funktion 
 
-```block
-	basic.showNumber(input.acceleration(Dimension.X))
+```blocks
+basic.forever(function () {
+    basic.showNumber(input.acceleration(Dimension.X))
+    basic.pause(1000)
+})
 ```
 
 * Die Neigung des Micro:bit kann man messen von 0 bis 1024 (nach rechts) und von (0 bis -1023) nach links
@@ -30,7 +33,7 @@ Hier werden jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr 
 * Dies wird ständig mit der Funktion "Dauerhaft" überprüft
 * Test nun ausgeibig diese Funktion und verscuhe auch kleine Veränderungen durchzuführen
 
-* [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
+[Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_g2rPdfcgsLxj)
 
 * Jetzt kann man durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
 * Probiert dieses Programm aus
