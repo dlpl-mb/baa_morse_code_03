@@ -47,7 +47,7 @@ input.onButtonPressed(Button.A, function () {
 * Hier greifen wir auf früheren Programmcode zurück und bauen diesen weiter
 * [Programmcode **Sende Morsecodes**](https://makecode.microbit.org/#pub:_Vy4KdpPxpWTm){:target="_blank"}
 
-### Erweiterung: Bestätigung des Empfangs (Fachbegriff: handshake)
+### Erweiterung: Bestätigung des Empfangs
 
 * Nun sollte der Empfänger noch bestätigen, ob er die Nachricht erhalten und verstanden hat.
 * Da die ``|Taste A|`` schon belegt ist, wird ``|Taste B|`` für die Antwort verwendet - diese sendet ein 'ok' zurück
