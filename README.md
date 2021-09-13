@@ -31,7 +31,7 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-[Programmcode **Zeige zufällige Zahl**](https://makecode.microbit.org/#pub:_8ftYxp4D996s)
+* [Programmcode **Zeige zufällige Zahl**](https://makecode.microbit.org/#pub:_8ftYxp4D996s)
 
 * Überlege warum im Programmcode ein leeres Anzeigefeld eingebaut wurde
 
@@ -190,7 +190,7 @@ basic.forever(function () {
 * Mit diesem Programmteil kann man zwar den Buchstaben wählen, aber muss ja noch den passenden Morsecode dazu finden
 * Dazu nimmt man den Zeiger (index) auf die Buchstabenliste und holt sich den Morsecode aus der **liste_morse_codes**
 
-[Programmcode: Morsecode vom Buchstaben](https://makecode.microbit.org/#pub:_HUfdjC3RAdvV)
+* [Programmcode: Morsecode vom Buchstaben](https://makecode.microbit.org/#pub:_HUfdjC3RAdvV)
 
 Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zu stellen. Es geht jetzt nur mehr um die Übertragung der Morsecodes an den Empfänger.
 
