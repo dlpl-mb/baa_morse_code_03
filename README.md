@@ -34,17 +34,22 @@ input.onButtonPressed(Button.A, function () {
 
 [Programmcode **Zeige zufällige Zahl**](https://makecode.microbit.org/#pub:_8ftYxp4D996s)
 
-* Überlege warum im Programmcode ein leeres Feld eingebaut wurde
+* Überlege warum im Programmcode ein leeres Anzeigefeld eingebaut wurde
 
 ### Zeige einen Buchstaben per Zufall
 
 * Wir werden in unserem Programm 26 Buchstaben verwenden - also brauchen wir eine Zufallszahl zwischen 0 und 25.  
-* Wir werden mit dem folgenden Testprogramm den Morsecode eines zufälligen Buchstabens senden
 * [Programmcode **Zeige zufällige Buchstaben**](https://makecode.microbit.org/#pub:_RcD107c83V1o){:target="_blank"}
-* Dabei greift man mit dem Befehl ``||array: [liste_buchstaben[zufall]]||`` auf ein Element der Buchstaben-Liste zu und zeigt dieses an.
+* Dabei greift man mit dem Befehl ``||array: [liste_buchstaben[zufall]]||`` auf ein Element der Buchstaben-Liste zu und zeigt den gefundenen Buchstaben an.
 * Experimentiert weiter mit diesem Befehl.
 
-### Aufgabe: Sende zufällige Morsezeichen zum Empfänger
+### Zeige ein Morsezeichen per Zufall
+
+* Wir möchten mit unserem Testprogramm den Morsecode eines zufälligen Buchstabens senden: Was ist zu ändern?
+* Es ist nur eine Kleinigkeit zu ändern
+* [Programmcode **Zeige zufälliges Morsezeichen**](https://makecode.microbit.org/#pub:_VwkKjmbcrU7V)
+
+### Sende zufällige Morsezeichen zum Empfänger
 
 * Das zufällig Morsezeichen sollte nicht beim **Sender** anzeigt werden, sondern auch zum Empfänger versendet werden.
 * Hier greifen wir auf früheren Programmcode zurück und bauen diesen weiter
