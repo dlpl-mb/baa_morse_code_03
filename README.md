@@ -2,8 +2,8 @@
 
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
-In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keine mehr Grenzen gesetzt, wie und was man noch an Funktion einbauen kann.
-Programmieren lernt man besonders gut durch Untersuchen, Verbessern, Fehler beseitigen und Testen von neuen Ideen und Funktionen. Aber auch fremde Programm zerlegen und verändern ist ein gute Methode neues zu erfahren.
+In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keine Grenzen mehr gesetzt, was man noch an Funktion erweitern kann.
+Programmieren lernt man besonders gut durch Untersuchen, Verbessern, Fehler beseitigen und Testen von neuen Ideen und Funktionen. Aber auch fremde Programm zerlegen und verändern ist ein sehr gute Methode Neues zu erfahren.
 
 Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr so genau besprochen werden. Durch Analysieren und Verändern und Probieren lernt man beim Programmieren am allermeisten.
 
