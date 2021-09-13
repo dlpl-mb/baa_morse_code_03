@@ -147,5 +147,4 @@ Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zuste
 Wer sich bis hierher durchgearbeitet hat - Gratulation - da waren schon echt Probleme enthalten, die den Profiprogrammierer beschäftigen.
 
 <style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}</style>
-<script src="https://makecode.com/gh-pages-embed.js"></script>
-<script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
