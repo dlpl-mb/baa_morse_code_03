@@ -5,9 +5,84 @@
 In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keine mehr Grenzen gesetzt, wie und was man noch an Funktion einbauen kann.
 Programmieren lernt man besonders gut durch Untersuchen, Verbessern, Fehler beseitigen und Testen von neuen Ideen und Funktionen. Aber auch fremde Programm zerlegen und verändern ist ein gute Methode neues zu erfahren.
 
-Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr so genau besprochen werden. Durch Analysieren und Verändern lernt man beim Programmieren am allermeisten.
+Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr so genau besprochen werden. Durch Analysieren und Verändern und Probieren lernt man beim Programmieren am allermeisten.
 
-## Erweiterung 1: Senden von akustischen Signalen
+## Erweiterung 1: Senden von zufälligen Morsezeichen
+
+* Im letzten Abschnitt haben wir Morsezeichen einprogrammiert und versendet, wollte man neue versenden, musste man umprogrammieren 
+* Wir wollen per Zufall versenden, der Computer sollte auswählen, welches Zeichen versandt wird.
+
+### Aufgabe: Zeige Buchstaben per Zufall
+
+**Lösung a:** Ein Auswahl eines Morsecodes per Zufall
+
+* Man benötigt eine Zufallszahl zwischen 0 und der Anzahl der verfübaren Buchstaben.
+* Eine Zufallszahl kann man im Bereich ``|Mathematik|`` erzeugen - der Befehl heißt `Wähle eine zufällige Zahl von 0 bis 10`
+* Experimentiere mit der  Zufallsfunktion: Ändere den Wertebereich
+* Damit kann man auch das Würfeln mit ienem Spielwürfel simmulieren: Wertebereich 1 - 6
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+   basic.showLeds(`
+      . . . . .
+      . . . . .
+      . . . . .
+      . . . . .
+      . . . . .
+   `)
+   basic.showNumber(randint(0, 10))
+})
+```
+
+* Überlege warum im Programmcode ein leeres Feld eingebaut wurde
+* Wir werden in unserem Programm 26 Buchstaben verwenden - also brauchen wir eine Zufallszahl zwischen 0 und 25.  
+* Wir werden mit dem folgenden Testprogramm den Morsecode eines zufälligen Buchstabens senden
+* [Programmcode **Zeige zufällige Buchstaben**](https://makecode.microbit.org/#pub:_RcD107c83V1o){:target="_blank"}
+* Dabei greift man mit dem Befehl ``||array: [liste_buchstaben[zufall]]||`` auf ein Element der Buchstaben-Liste zu und zeigt dieses an.
+* Experimentiert weiter mit diesem Befehl.
+
+### Aufgabe: Sende zufällige Morsezeichen zum Empfänger
+
+* Das zufällig Morsezeichen sollte nicht beim **Sender** anzeigt werden, sondern auch zum Empfänger versendet werden.
+* Hier greifen wir auf früheren Programmcode zurück und bauen diesen weiter
+* [Programmcode **Sende Morsecodes**](https://makecode.microbit.org/#pub:_Vy4KdpPxpWTm){:target="_blank"}
+
+### Erweiterung: Bestätigung des Empfangs (Fachbegriff: handshake)
+
+* Nun sollte der Empfänger noch bestätigen, ob er die Nachricht erhalten und verstanden hat.
+* Da die ``|Taste A|`` schon belegt ist, wird ``|Taste B|`` für die Antwort verwendet - diese sendet ein 'ok' zurück
+* Erst dann darf der **Sender** wieder eine neue Nachricht abschicken
+* Wurde die Sendungsinformation **nicht** verstanden drückt der Empfänger auf die ``|Tasten A+B|`` - dadurch wird ein "no" gesendet.
+* Somit sieht der **Sender** auf sein Micro:bit-Display ein 'ok' oder 'no'
+* Probiert einmal 5 Durchgänge, schreibt die Ergebnisse auf, wie viele Marezeichen ihr richtig erkannt haben und wechselt dann die Rollen
+* Seht euch auch den Programmcode auf dem Computerbildschirm an
+* !!! Genaue Abmachungen zwischen Sender und Empfänger sind besonders wichtig !!!
+
+* Das fertig Ergebnis sieht man im folgenden Programmcode.
+* [Programmcode **Handshake**](https://makecode.microbit.org/#pub:_4ucJWw6YpL6b){:target="_blank"}
+
+**Rollen tauschen** (immer die genaue Abstimmung mit dem Partner/der Partnerin)
+
+* Merke: Die ``|Taste A|`` gehört immer dem **Sender**
+* Erfindet selber neue Spielregeln dazu
+
+### Eine Belohnung: Tonausgabe
+
+<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mb_kopfhoerer.png?raw=1">
+
+* Die Zusatzfunktion Tonausgabe baut ihr selber noch ein (Micro:bit V2 erforderlich oder ein angeschlossener Kopfhörer):
+* Sobald ein Buchstabe beim Empfänger ankommt, soll eine Ton gespielt werden
+* Genauso, wenn die Antwort bei Sender ankommt, soll ein Bestätigungston gespielt werden.
+
+```block
+  music.playTone(262, music.beat(BeatFraction.Whole))
+```
+
+[Programmcode: **Tonausgabe**](https://makecode.microbit.org/#pub:_0Uw0EdbciAaa){:target="_blank"}
+
+<hr>
+
+## Erweiterung 2: Senden von akustischen Signalen
 
 * Statt den optischen Zeichen werden jetzt kurze und lange Töne gesendet.
 * Sobald ein Morsecode gewählt ist, sollten das Zeichen Punkt einen kurzen Ton erzeugen und der Strich einen langen Ton
@@ -30,7 +105,7 @@ Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nic
 
 <hr>
 
-## Erweiterung 2: Senden von Lichtsignalen
+## Erweiterung 3: Senden von Lichtsignalen
 
 * Statt den optischen Signalen werden jetzt kurze und lange Lichtsignale gesendet.
 * Sobald ein Morsecode gewählt ist, sollten das Zeichen Punkt ein kurzes Lichtsgnal erzeugen und der Strich ein langen Lichtsingal
@@ -53,14 +128,13 @@ Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nic
 
 <hr>
 
-## Erweiterung 3: "Eine Tastatur zum Auswählen der Buchstaben"
+## Erweiterung 4: "Eine Tastatur zum Auswählen der Buchstaben"
 
 * Statt dem zufälligen Auswählen eines Morsezeichens, wollen wir mir Hilfe einer "Tastatur" die Sende-Buchstaben auswählen können
 * Dabei wird zwar keine richtige Tastatur ersetzen, aber eine Möglichkeit zur Auswahl eines Buchstabes
 * Überlege: Wie kann man mit der Sensorik des Micro:bit ein Auswählen schaffen: Mit Licht, mit Sound oder mit Neigung? Welche Werte bekomme ich vom Micro:bit geliefert?
 
 <img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/microbit-kippen.gif?raw=1">
-
 ### Wir arbeiten mit dem Neigungsmesser (Beschleunigungssmesser)
 
 * Dieser hat drei Kipprichtungen, x, y und z. Wir verwenden die Richtung x, das bedeutet Neigung `rechts-links`
@@ -144,7 +218,10 @@ Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zuste
 * Wer sich schon viel mit Micro:bit beschäftig hat, kann dann auch versuchen den Micro:bit umprogrammieren:
   * Dabei ist wichtig, dass man im Team immer die Regeln bespricht.
 
-Wer sich bis hierher durchgearbeitet hat - Gratulation - da waren schon echt Probleme enthalten, die den Profiprogrammierer beschäftigen.
+Wer sich bis hierher durchgearbeitet hat - Gratulation - da waren schon echt große Aufgaben enthalten.
+Weiterhin noch viel Erfolg beim Programmieren mit Micro:bit, jetzt wäre langsam an der Zeit umzusteigen auf die Programmiersprache Javascript oder dann auch auf Python, auf die man per Schalter von der grafischen Programmierung umschalten kann.
+
+<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umschalter_js.png?raw=1">
 
 <style>.page-header {font-size:1rem;height:0vh;padding-top:1.5rem}</style>
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
