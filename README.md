@@ -3,23 +3,21 @@
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
 In dritten Teil dieses Projektes werden nun einzelne Erweiterungen  und Verbesserungen vorgenommen. Es sind hier fast keine Grenzen mehr gesetzt, was man noch an Funktion erweitern kann.
-Programmieren lernt man besonders gut durch Untersuchen, Verbessern, Fehler beseitigen und Testen von neuen Ideen und Funktionen. Aber auch fremde Programm zerlegen und verändern ist ein sehr gute Methode Neues zu erfahren.
+Programmieren lernt man besonders gut durch Untersuchen, Verbessern, Fehler beseitigen und Testen von neuen Ideen. Aber auch fremde Programm zerlegen und verändern ist ein sehr gute Methode Neues zu erfahren.
 
-Hier werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr so genau besprochen werden. Durch Analysieren und Verändern und Probieren lernt man beim Programmieren am allermeisten.
+Hier in diesem Abschnitt werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, die aber nicht mehr so genau wie im letzten Abschnitt besprochen werden. Durch eigenes Probieren lernst du beim Programmieren sehr viel. Man braucht aber auch viel Ausdauer, um Fehler immer wieder von verschiedenen Seiten zu betrachten und Lösungen zu finden.
 
 ## Erweiterung 1: Senden von zufälligen Morsezeichen
 
-* Im letzten Abschnitt haben wir Morsezeichen einprogrammiert und versendet, wollte man neue versenden, musste man umprogrammieren 
-* Wir wollen per Zufall versenden, der Computer sollte auswählen, welches Zeichen versandt wird.
+* Im letzten Abschnitt haben wir Morsezeichen einprogrammiert und versendet, wollte man neue versenden, musste man umprogrammieren
+* Wir wollen nun per Zufall Daten versenden, der Computer sollte auswählen, welches Zeichen versandt wird
 
-### Aufgabe: Zeige Buchstaben per Zufall
+### Vorübung: Zeige ein Zahl per Zufall
 
-**Lösung a:** Ein Auswahl eines Morsecodes per Zufall
-
-* Man benötigt eine Zufallszahl zwischen 0 und der Anzahl der verfübaren Buchstaben.
-* Eine Zufallszahl kann man im Bereich ``|Mathematik|`` erzeugen - der Befehl heißt `Wähle eine zufällige Zahl von 0 bis 10`
+* Zufallszahlen erhält man im Bereich der ``|Mathematik|``
+* Der Befehl heißt `Wähle eine zufällige Zahl von 0 bis 10`
 * Experimentiere mit der  Zufallsfunktion: Ändere den Wertebereich
-* Damit kann man auch das Würfeln mit ienem Spielwürfel simmulieren: Wertebereich 1 - 6
+* Damit kann man auch das Würfeln mit einem Spielwürfel simmulieren: Wertebereich 1 - 6
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -34,7 +32,12 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
+[Programmcode **Zeige zufällige Zahl**](https://makecode.microbit.org/#pub:_8ftYxp4D996s)
+
 * Überlege warum im Programmcode ein leeres Feld eingebaut wurde
+
+#### Zeige einen Buchstaben per Zufall
+
 * Wir werden in unserem Programm 26 Buchstaben verwenden - also brauchen wir eine Zufallszahl zwischen 0 und 25.  
 * Wir werden mit dem folgenden Testprogramm den Morsecode eines zufälligen Buchstabens senden
 * [Programmcode **Zeige zufällige Buchstaben**](https://makecode.microbit.org/#pub:_RcD107c83V1o){:target="_blank"}
