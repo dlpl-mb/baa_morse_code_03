@@ -3,9 +3,9 @@
 
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/SOS.svg.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
-Wusstest du, dass ein Micro:bit mit anderen Micro:bit über Funkwellen kommunizieren kann. In diesem Morse-Code-Projekt II werden wir nun den Morsecode zwischen 2 micro:bits versenden. Dazu müssen wir einige Vereinbarungen treffen, damit die Kommunikation auch funktioniert, wenn ich Robi02 nicht sehen und hören kann - etwa, wenn sie sich in einem anderen Raum befindet. Die Vereinbarungen sind:
- * Die Taste A sendet den Morse-Code
- * Die Taste B dient zum Bestätigen der Nachricht 
+Wusstest du, dass ein Micro:bit mit anderen Micro:bit über Funkwellen kommunizieren kann. In diesem Morse-Code-Projekt II werden wir nun den Morsecode zwischen 2 Micro:bits versenden. Dazu müssen wir einige Vereinbarungen treffen, damit die Kommunikation auch funktioniert, wenn ich Robi02 nicht sehen und hören kann - etwa, wenn sie sich in einem anderen Raum befindet. Die Vereinbarungen sind:
+ * Die ``|Taste A|`` sendet den Morse-Code
+ * Die ``|Taste B|`` dient zum Bestätigen der Nachricht 
  * Ein Symbol Herz dient als OK! Dann kann der Sender die nächste Nachricht senden.
  * Ein rauriger Smiley dient als - Nicht OK - bitte noch einmal senden!
  * Natürlich könnt ihr euch beim Programmieren eigene Kommunikationssymbole ausmachen.
@@ -25,7 +25,7 @@ let liste_morsezeichen = [".-","-...","-.-.","-..",".","..-.","--.","...","---"]
 * Beachte dabei, dass nach jdem Bustaben **"dreimal kurz"** (=S) ein kurze Pause gemacht wird und erst dann **"dreimal lang"** (=O) gesendet wird. Später wird noch wichtig, dass nach einem gesamten Wort ebenso eine längere Pause (etwa 1 Sekunde) gemacht wird.
 * Schreibt auf Papier, wir nun das folgende Wort heißt:  <img src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/anna.png?raw=1">
 
-## Programmteil 1: Verbindung von 2 micro:bit
+## Programmteil 1: Verbindung von 2 Micro:bit
 
 Um nachher Morsecodes und Buchstaben senden zu können, müssen zwei Micro:bit durch ein kurzes Programm verbunden werden - suche dir also eine zweite Person als Kontaktpartner. Arbeitet zu zweit weiter.
 **Grundregeln dazu sind:**
@@ -39,7 +39,7 @@ Um nachher Morsecodes und Buchstaben senden zu können, müssen zwei Micro:bit d
 <br>
 
 **Der erster Test zur Übertragung:** 
-* Wir werden mit `Taste A` senden und mit `Taste B` immer antworten. 
+* Wir werden mit ``|Taste A|`` senden und mit ``|Taste B|`` immer antworten. 
 * Was heißt die Aufgabenstellung? 
 	* Der Sender sendet einmal den Buchstaben A und den dazugehörigen Morsecode
 	* Der Empfänger bekommt den Morsecode angezeigt und muss den empfangenen Morsecode in den Buchstaben übersetzen.
@@ -94,7 +94,7 @@ Um nachher Morsecodes und Buchstaben senden zu können, müssen zwei Micro:bit d
 * [Programmcode 2 ](https://makecode.microbit.org/#pub:_DVe8TrKz3cRU "(target|_blank)")
 
 Eingebaut in das Übertragungsprogramm:
-* Nun wird der Zufallsgenerator in der `Taste A-Funktion` eingebaut:
+* Nun wird der Zufallsgenerator in der ``|Taste A|``-Funktion eingebaut:
 
 ```blocks
 	input.onButtonPressed(Button.A, function () {
@@ -142,7 +142,7 @@ Eingebaut in das Übertragungsprogramm:
 
 [Programmcode](https://makecode.microbit.org/#pub:_55zbeHhRTa2o "(target|_blank)")
 
-- Immer wenn `Taste A` gedrückt wird, zeigt es den augenblicklichen Kippwinkel (x) an. 
+- Immer wenn ``|Taste A|`` gedrückt wird, zeigt es den augenblicklichen Kippwinkel (x) an. 
 - Spiele das Programm auf den Micro:bit und teste.
 - Auch dieses folgende Sequenz zeigt dir den Kippwinkel x (links-Rechts) an - aber hier werden ständig neue Winkelwerte angezeigt, dadurch entstehen sehr viele Zahlen, ...
 ```blocks
@@ -208,7 +208,7 @@ Eingebaut in das Übertragungsprogramm:
 + Erst wenn diese Funktionen "verdaut" sind - hat es Sinn das gesamte Programm anzusehen.
 
 ## Fertiges Programm: Das Morse-Alphabet II
-Das fertige Programmgerüst enthält jetzt die wichtigsten Funktionen, damit du zu deinem Spielpartner alle Morsezeichen versenden kannst. Wenn dein Partner/deine Partner das Zeichen gelesen und verstanden hat, wird von dort mit der `Taste B` ein `+` zurückgeschickt.
+Das fertige Programmgerüst enthält jetzt die wichtigsten Funktionen, damit du zu deinem Spielpartner alle Morsezeichen versenden kannst. Wenn dein Partner/deine Partner das Zeichen gelesen und verstanden hat, wird von dort mit der ``|Taste B|`` ein `+` zurückgeschickt.
 
 + Das fertig kleine Übertragungsprogramm für alle Morsezeichen
 ```blocks
@@ -284,18 +284,18 @@ Der Autor dieses Morse-Beispielprogramms ist selbst seit Jahren Programmierer in
 
 * Nach dem Start sehen beide Micro:bit gleich aus
 * Nun muss abgemacht werden, wer nun bei diesem Spiel **Sender** ist:
-	* Nur der **Sender** drückt dazu beide `|Tasten A+B|` -> nun weiß das System, wer sendet und wer empfängt
+	* Nur der **Sender** drückt dazu beide ``|Tasten A+B|`` -> nun weiß das System, wer sendet und wer empfängt
 * Der **Empfänger** sollte bisher nur warten
 
 **Der Sender**
 * Jetzt kann der **Sender** durch `||Links-und-rechts-Neigen||` des Micro:bit einen Buchstaben wählen
-	* Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe abgeschickt werden - mit `|Taste A|`
+	* Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe abgeschickt werden - mit ``|Taste A|``
 * Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
 
 **Der Empfänger**
 * Der **Empfänger** sieht nun das Morsezeichen und sucht über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
-	* `|Taste A|` bedeutet: Morsezeichen **erkannt**
-	* `|Taste B|` bedeutet: **Nicht erkannt** - bitte noch einmal senden
+	* ``|Taste A|`` bedeutet: Morsezeichen **erkannt**
+	* ``|Taste B|`` bedeutet: **Nicht erkannt** - bitte noch einmal senden
 * Diese Antwort erhält der **Sender** auf sein Micro:bit Display (+ oder-)
 * Führt einmal 5 Durchgänge durch und wechselt dann ihr die Rollen.
 
@@ -303,7 +303,7 @@ Der Autor dieses Morse-Beispielprogramms ist selbst seit Jahren Programmierer in
 
 * Wie wird ein neues Spiel gestartet?
 * Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
-* Dann den Sender neu bestimmen mit `|Taste A+B|`
+* Dann den Sender neu bestimmen mit ``|Tasten A+B|``
 * Erfindet selber neue Spielregeln dazu
 * Natürlich kann man den Micro:bit auch umprogrammieren:
 	* Dabei ist wichtig, dass man im Team die Regeln bespricht.

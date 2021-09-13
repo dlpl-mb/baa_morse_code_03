@@ -121,7 +121,7 @@ Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zuste
 
 * [Programmcode: Neigungsfunktion](https://makecode.microbit.org/#pub:_HvE8XXc23Etx)
 * 
-  * Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe mit `|Taste A|` abgeschickt werden
+  * Ist der zu sendende Buchstabe gefunden, wird der Micro:bit wieder waagrecht gehalten und es kann der Buchstabe mit ``|Taste A|`` abgeschickt werden
 * Es wird dann der Morsecode des Buchstaben an den Empfänger gesendet und dort angezeigt.
 
 ## [Programmcode: Neigungstastatur](https://makecode.microbit.org/#pub:_8tqijz37gTMw){:target="_blank"}
@@ -129,8 +129,8 @@ Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zuste
 ### Aufgabe des Empfängers
 
 * Der **Empfänger** sieht nun das Morsezeichen und sucht über die Morse-Tabelle den richtigen Buchstaben, schreibt diesen als Beweis auf ein Blatt Papier und gibt Bescheid, ob der Buchstabe erkannt wurde:
-  * `|Taste B|` sendet ein 'ok': Morsezeichen **erkannt**
-  * `|Taste A+B|` sendet ein 'no': **Nicht erkannt** - "bitte noch einmal senden"
+  * ``|Taste B|`` sendet ein 'ok': Morsezeichen **erkannt**
+  * ``|Tasten A+B|`` sendet ein 'no': **Nicht erkannt** - "bitte noch einmal senden"
 * Diese Antwort erhält der **Sender** auf sein Micro:bit-Display ('ok' oder 'no')
 * Probiert es einmal 5 Durchgänge und wechselt dann ihr die Rollen.
 * Sehr auch auch den Programmcode auf dem Computerbildschirm an
@@ -139,7 +139,7 @@ Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zuste
 **Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
 
 * Wie wird ein neues Spiel gestartet?
-* Bei beiden Micro:bit die `|Reset-Taste|` (Rückseite des Micro.bit) drücken
+* Bei beiden Micro:bit die ``|Reset-Taste|`` (Rückseite des Micro.bit) drücken
 * Erfindet selber neue Spielregeln dazu
 * Wer sich schon viel mit Micro.bit beschäftig hat, kann dann auch versuchen den Micro:bit umprogrammieren:
   * Dabei ist wichtig, dass man im Team immer die Regeln bespricht.
