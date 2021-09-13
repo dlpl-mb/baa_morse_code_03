@@ -49,46 +49,48 @@ input.onButtonPressed(Button.A, function () {
 * Es ist nur eine Kleinigkeit zu ändern
 * [Programmcode **Zeige zufälliges Morsezeichen**](https://makecode.microbit.org/#pub:_VwkKjmbcrU7V)
 
-### Sende zufällige Morsezeichen zum Empfänger
+### Sende ein zufälliges Morsezeichen zum Empfänger
 
 * Das zufällig Morsezeichen sollte nicht beim **Sender** anzeigt werden, sondern auch zum Empfänger versendet werden.
 * Hier greifen wir auf früheren Programmcode zurück und bauen diesen weiter
 * [Programmcode **Sende Morsecodes**](https://makecode.microbit.org/#pub:_Vy4KdpPxpWTm){:target="_blank"}
 
-### Erweiterung: Bestätigung des Empfangs
+### Handshake: Bestätigung des Empfangs
 
 * Nun sollte der Empfänger noch bestätigen, ob er die Nachricht erhalten und verstanden hat.
-* Da die ``|Taste A|`` schon belegt ist, wird ``|Taste B|`` für die Antwort verwendet - diese sendet ein 'ok' zurück
+* Da die ``|Taste A|`` schon belegt ist, wird ``|Taste B|`` für die Antwort verwendet
+* Diese sendet ein 'ok' zurück, wenn alles verstanden wurde
 * Erst dann darf der **Sender** wieder eine neue Nachricht abschicken
-* Wurde die Sendungsinformation **nicht** verstanden drückt der Empfänger auf die ``|Tasten A+B|`` - dadurch wird ein "no" gesendet.
+* Wurde die Sendungsinformation **nicht** verstanden, drückt der Empfänger auf die Tastenkombination ``|Tasten A+B|`` - dadurch wird ein "no" gesendet.
 * Somit sieht der **Sender** auf sein Micro:bit-Display ein 'ok' oder 'no'
-* Probiert einmal 5 Durchgänge, schreibt die Ergebnisse auf, wie viele Marezeichen ihr richtig erkannt haben und wechselt dann die Rollen
-* Seht euch auch den Programmcode auf dem Computerbildschirm an
+* Probiert einmal 5 Durchgänge, schreibt die Ergebnisse auf, wie viele Morsezeichen ihr richtig erkannt haben und wechselt dann die Rollen
+* Seht euch auch den Programmcode an
 * !!! Genaue Abmachungen zwischen Sender und Empfänger sind besonders wichtig !!!
 
 * Das fertig Ergebnis sieht man im folgenden Programmcode.
-* [Programmcode **Handshake**](https://makecode.microbit.org/#pub:_4ucJWw6YpL6b){:target="_blank"}
+* [Programmcode **Handshake**](https://makecode.microbit.org/#pub:_ijv32j2rRa7u){:target="_blank"}
+* <img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/morse_handshake.png?raw=1">
 
-**Rollen tauschen** (immer die genaue Abstimmung mit dem Partner/der Partnerin)
+* Rollen tauschen** (immer die genaue Abstimmung mit dem Partner/der Partnerin)
 
 * Merke: Die ``|Taste A|`` gehört immer dem **Sender**
 * Erfindet selber neue Spielregeln dazu
 
-### Eine Belohnung: Tonausgabe
+### Eine kleine Belohnung: Mit Tonausgabe
 
-<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mb_kopfhoerer.png?raw=1">
+<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/tonausgabe.png?raw=1">
 
 * Die Zusatzfunktion Tonausgabe baut ihr selber noch ein (Micro:bit V2 erforderlich oder ein angeschlossener Kopfhörer):
 * Sobald ein Buchstabe beim Empfänger ankommt, soll eine Ton gespielt werden
-* Genauso, wenn die Antwort bei Sender ankommt, soll ein Bestätigungston gespielt werden.
+* Ebenso, wenn die Antwort bei Sender ankommt
 
 ```block
   music.playTone(262, music.beat(BeatFraction.Whole))
 ```
 
-[Programmcode: **Tonausgabe**](https://makecode.microbit.org/#pub:_0Uw0EdbciAaa){:target="_blank"}
+* [Programmcode: **Tonausgabe**](https://makecode.microbit.org/#pub:_0Uw0EdbciAaa){:target="_blank"}
 
-<hr>
+<hr><hr>
 
 ## Erweiterung 2: Senden von akustischen Signalen
 
