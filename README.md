@@ -69,7 +69,7 @@ input.onButtonPressed(Button.A, function () {
 
 * Das fertig Ergebnis sieht man im folgenden Programmcode.
 * [Programmcode **Handshake**](https://makecode.microbit.org/#pub:_ijv32j2rRa7u){:target="_blank"}
-* <img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/morse_handshake.png?raw=1">
+* <img width="90%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/morse_handshake.png?raw=1">
 
 * Rollen tauschen** (immer die genaue Abstimmung mit dem Partner/der Partnerin)
 
@@ -90,11 +90,11 @@ input.onButtonPressed(Button.A, function () {
 
 * [Programmcode: **Tonausgabe**](https://makecode.microbit.org/#pub:_0Uw0EdbciAaa){:target="_blank"}
 
-<hr><hr>
+<hr>
 
 ## Erweiterung 2: Senden von akustischen Signalen
 
-* Statt den optischen Zeichen werden jetzt kurze und lange Töne gesendet.
+* Statt optischer Zeichen werden jetzt kurze und lange Töne gesendet.
 * Sobald ein Morsecode gewählt ist, sollten das Zeichen Punkt einen kurzen Ton erzeugen und der Strich einen langen Ton
 * Erreichen kann man das, indem man eine Musiknote kurz oder lang spielt.
 * Als Ausgangspunkt wählen wir das Programm aus dem Projektteil "Standard"
@@ -102,10 +102,10 @@ input.onButtonPressed(Button.A, function () {
 
 ### Empfängernachricht analysieren
 
-<img width="100%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umsetzung_ton.png?raw=1">
+* <img width="100%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umsetzung_ton.png?raw=1">
 
 * Hierbei muss das empfangene Morsezeichen (receiveString) zerlegt und untersucht werden
-* Es wird eine Schleife durch alle Buchstaben gestartet und gefragt, 
+* Es wird eine Schleife durch alle Buchstaben gestartet und gefragt,
   * ob ein "." vorkommt: dann wird ein kurzer Ton gespielt
   * ob ein "-" vorkommt: dann wird ein langer Ton gespielt
   * ob ein Leerzeichen (Wortende) vorkommt: dann wird eine Pause gemacht
@@ -125,7 +125,7 @@ input.onButtonPressed(Button.A, function () {
 
 ### Empfängernachricht analysieren
 
-<img width="80%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umsetzung_licht.png?raw=1">
+* <img width="80%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umsetzung_licht.png?raw=1">
 
 * Hierbei muss das empfangene Morsezeichen (receiveString) zerlegt und untersucht werden
 * Es wird eine Schleife durch alle Buchstaben gestartet und gefragt, 
