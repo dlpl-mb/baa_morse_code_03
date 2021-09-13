@@ -139,9 +139,9 @@ Damit ist nun alles bekannt, um das gesamte Programm dieser Version fertig zuste
 **Rollen tauschen** (immer in Abstimmung mit dem Partner/der Partnerin)
 
 * Wie wird ein neues Spiel gestartet?
-* Bei beiden Micro:bit die ``|Reset-Taste|`` (Rückseite des Micro.bit) drücken
+* Bei beiden Micro:bit die ``|Reset-Taste|`` (Rückseite des Micro:bit) drücken
 * Erfindet selber neue Spielregeln dazu
-* Wer sich schon viel mit Micro.bit beschäftig hat, kann dann auch versuchen den Micro:bit umprogrammieren:
+* Wer sich schon viel mit Micro:bit beschäftig hat, kann dann auch versuchen den Micro:bit umprogrammieren:
   * Dabei ist wichtig, dass man im Team immer die Regeln bespricht.
 
 Wer sich bis hierher durchgearbeitet hat - Gratulation - da waren schon echt Probleme enthalten, die den Profiprogrammierer beschäftigen.
