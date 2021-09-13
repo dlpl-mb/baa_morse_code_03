@@ -36,7 +36,7 @@ input.onButtonPressed(Button.A, function () {
 
 * Überlege warum im Programmcode ein leeres Feld eingebaut wurde
 
-#### Zeige einen Buchstaben per Zufall
+### Zeige einen Buchstaben per Zufall
 
 * Wir werden in unserem Programm 26 Buchstaben verwenden - also brauchen wir eine Zufallszahl zwischen 0 und 25.  
 * Wir werden mit dem folgenden Testprogramm den Morsecode eines zufälligen Buchstabens senden
