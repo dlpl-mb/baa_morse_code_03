@@ -1,22 +1,23 @@
 # Programmieren Advanced
 
+IN ARBEIT
+
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
-Der dritte Teil sollte nun für jene von euch Anregungen bieten, die schon viel mit Micro:bit programmiert haben und einzelne Erweiterungen  und Verbesserungen probieren wollen. Micro:bit ist sehr leistungsfähig und reicht oftmals an Plattformen wie Arduino oder Raspberry PI heran, diese sind wichtige Plattformen für den Bastler- und Elektronikbereich.
+Der dritte Teil sollte nun für jene von euch Anregungen bieten, die schon viel mit Micro:bit programmiert haben und einzelne Erweiterungen und Verbesserungen probieren wollen. Micro:bit ist sehr leistungsfähig und reicht oftmals an Plattformen wie Arduino oder Raspberry PI heran, diese sind wichtige Plattformen für den Bastler- und Elektronikbereich.
 
-Hier in diesem Abschnitt werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellen, die aber nicht mehr detalliert besprochen werden. Durch eigenes Probieren lernst du beim Programmieren sehr viel. Man braucht aber auch viel Ausdauer, um Fehler immer wieder von verschiedenen Seiten zu betrachten und Lösungen zu finden.
+Hier in diesem Abschnitt werden wir dir jetzt einzelne Ideen mit Lösungen vorgestellt, sie sollen als Ideen für Weiterentwicklungen dienen.
 
 ## Erweiterung 1: Senden von zufälligen Morsezeichen
 
-* Im letzten Abschnitt haben wir Morsezeichen einprogrammiert und versendet, wollte man neue versenden, musste man umprogrammieren
 * Wir wollen nun per Zufall Daten versenden, der Computer sollte auswählen, welches Zeichen versandt wird
 
-### Vorübung: Zeige ein Zahl per Zufall
+### Vorübung: Zeige eine Zufallszahl
 
-* Zufallszahlen erhält man im Bereich der ``|Mathematik|``
+* Zufallszahlen befinden sich im Bereich der ``|Mathematik|``
 * Der Befehl heißt `Wähle eine zufällige Zahl von 0 bis 10`
 * Experimentiere mit der  Zufallsfunktion: Ändere den Wertebereich
-* Damit kann man auch das Würfeln mit einem Spielwürfel simmulieren: Wertebereich 1 - 6
+* Übung: Wie kann man das Würfeln wie mit einem Spielwürfel simulieren: Zahlen von 1 - 6
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -33,25 +34,24 @@ input.onButtonPressed(Button.A, function () {
 
 * [Programmcode **Zeige zufällige Zahl**](https://makecode.microbit.org/#pub:_8ftYxp4D996s)
 
-* Überlege warum im Programmcode ein leeres Anzeigefeld eingebaut wurde
+* Überlege: Im Programmcode ist ein leeres Anzeigefeld eingebaut - was könnte der Grund dafür sein?
 
-### Zeige einen Buchstaben per Zufall
+### Zeige eines Zufallsbuchstaben
 
 * Wir werden in unserem Programm 26 Buchstaben verwenden - also brauchen wir eine Zufallszahl zwischen 0 und 25.  
 * [Programmcode **Zeige zufällige Buchstaben**](https://makecode.microbit.org/#pub:_RcD107c83V1o){:target="_blank"}
 * Dabei greift man mit dem Befehl ``||array: [liste_buchstaben[zufall]]||`` auf ein Element der Buchstaben-Liste zu und zeigt den gefundenen Buchstaben an.
-* Experimentiert weiter mit diesem Befehl.
+* Experimentiert mit diesem Befehl
 
 ### Zeige ein Morsezeichen per Zufall
 
 * Wir möchten mit unserem Testprogramm den Morsecode eines zufälligen Buchstabens senden: Was ist zu ändern?
-* Es ist nur eine Kleinigkeit zu ändern
 * [Programmcode **Zeige zufälliges Morsezeichen**](https://makecode.microbit.org/#pub:_VwkKjmbcrU7V)
 
 ### Sende ein zufälliges Morsezeichen zum Empfänger
 
-* Das zufällig Morsezeichen sollte nicht beim **Sender** anzeigt werden, sondern auch zum Empfänger versendet werden.
-* Hier greifen wir auf früheren Programmcode zurück und bauen diesen weiter
+* Das zufällige Morsezeichen zum Empfänger versendet werden
+* Wir vervollständigen auf früheren Programmcode zurück und bauen diesen weiter
 * [Programmcode **Sende Morsecodes**](https://makecode.microbit.org/#pub:_Vy4KdpPxpWTm){:target="_blank"}
 
 ### Handshake: Bestätigung des Empfangs
@@ -66,21 +66,21 @@ input.onButtonPressed(Button.A, function () {
 * Seht euch auch den Programmcode an
 * !!! Genaue Abmachungen zwischen Sender und Empfänger sind besonders wichtig !!!
 
-* Das fertig Ergebnis sieht man im folgenden Programmcode.
+* Das fertige Ergebnis sieht man im folgenden Programmcode.
 * [Programmcode **Handshake**](https://makecode.microbit.org/#pub:_ijv32j2rRa7u){:target="_blank"}
 * <img width="90%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/morse_handshake.png?raw=1">
 
 * Rollen tauschen** (immer die genaue Abstimmung mit dem Partner/der Partnerin)
 
 * Merke: Die ``|Taste A|`` gehört immer dem **Sender**
-* Erfindet selber neue Spielregeln dazu
+* Erfindet selbst neue Spielregeln dazu
 
 ### Eine kleine Belohnung: Mit Tonausgabe
 
-<img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/tonausgabe.png?raw=1">
+<img width="30%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/tonausgabe.png?raw=1">
 
-* Die Zusatzfunktion Tonausgabe baut ihr selber noch ein (Micro:bit V2 erforderlich oder ein angeschlossener Kopfhörer):
-* Sobald ein Buchstabe beim Empfänger ankommt, soll eine Ton gespielt werden
+* Einbau einer Zusatzfunktion Tonausgabe (Micro:bit V2 erforderlich oder ein angeschlossener Kopfhörer):
+* Sobald ein Buchstabe beim Empfänger ankommt, soll ein Ton gespielt werden
 * Ebenso, wenn die Antwort bei Sender ankommt
 
 ```block
@@ -106,7 +106,7 @@ input.onButtonPressed(Button.A, function () {
 * Es wird eine Schleife durch alle übertragenen Morsezeichen gestartet und gefragt,
   * ob ein "." vorkommt: dann wird ein kurzer Ton gespielt
   * ob ein "-" vorkommt: dann wird ein langer Ton gespielt
-  * ob ein Leerzeichen (Wortende) vorkommt: dann wird eine Pause gewarte
+  * ob ein Leerzeichen (Wortende) vorkommt: dann wird eine Pause gewartet
 
 * [Programmcode: Morsezeichen als Tonsignalen](https://makecode.microbit.org/#pub:_bsWVoP2PLdbK){:target="_blank"}  
 * Trainiert etwas mit diesem Programm - das hört sich schon mehr nach Morsezeichen an.
@@ -116,8 +116,8 @@ input.onButtonPressed(Button.A, function () {
 ## Erweiterung 3: Senden von Lichtsignalen
 
 * Statt den optischen Signalen werden jetzt kurze und lange Lichtsignale gesendet.
-* Sobald ein Morsecode gewählt ist, sollten das Zeichen Punkt ein kurzes Lichtsgnal erzeugen und der Strich ein langen Lichtsignal
-* Erreichen kann man das, indem man eine alle Lichtpunkte des Micro:bit einschaltet (wenn ein Strich gesendet wird) oder nur einige wenige bei einem Punkt
+* Sobald ein Morsecode gewählt ist, sollten das Zeichen **Punkt** ein kurzes Lichtsignal erzeugen und der **Strich** ein langes Lichtsignal
+* Erreichen kann man dies, indem man eine alle 25 Lichtpunkte des Micro:bit verschieden lange aufleuchten lässt.
 * Als Ausgangspunkt wählen wir das obere Programm "Handshake"
 * [Programmcode **Handshake**](https://makecode.microbit.org/#pub:_ijv32j2rRa7u){:target="_blank"} 
 
@@ -126,18 +126,18 @@ input.onButtonPressed(Button.A, function () {
 * Hierzu muss das empfangene Morsezeichen (receiveString) zerlegt und untersucht werden
 * <img width="80%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/umsetzung_licht.png?raw=1">
 * Es wird eine Schleife durch alle eingelangten Morse gestartet und gefragt,
-  * ob ein "." vorkommt: dann wird ein kleiner Lichtpunkt gezeigt
-  * ob ein "-" vorkommt: dann wird ein die volle Matrix beleuchtet
-  * ob ein Leerzeichen (Wortende) vorkommt: kein Licht
+  * ob ein "." vorkommt: dann wird ein kurzes Lichtsignal
+  * ob ein "-" vorkommt: dann wird ein langes Lichtsignal
+  * ob ein Leerzeichen (Wortende) vorkommt: Pause
 
-* [Programmcode: Morsezeichen als Lichtsignalen](https://makecode.microbit.org/#pub:_dsJhEK2q6b1q){:target="_blank"}  
+* [Programmcode: Morsezeichen als Lichtsignalen](https://makecode.microbit.org/#pub:_E7s9aqKLqicd){:target="_blank"}  
 * Analysiert und ändert dieses Programm
 
 <hr>
 
 ## Erweiterung 4: "Eine Tastatur zum Auswählen der Buchstaben"
 
-* Statt dem zufälligen Auswählen eines Morsezeichens, wollen wir mir Hilfe einer "Tastatur" die Sende-Buchstaben auswählen können
+* Statt dem zufälligen Auswählen eines Morsezeichens, wollen wir mit Hilfe einer "Tastatur" die Sende-Buchstaben auswählen können
 * Dabei wird zwar keine richtige Tastatur ersetzen, aber eine Möglichkeit zur Auswahl eines Buchstabens
 * Überlege: Wie kann man mit der Sensorik des Micro:bit ein Auswählen schaffen: Mit Licht, mit Sound, Neigung, ... ? Welche Werte bekomme ich vom Micro:bit geliefert?
 * <img width="50%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/microbit-kippen.gif?raw=1">
@@ -156,7 +156,7 @@ basic.forever(function () {
 
 * Die Neigung des Micro:bit kann man messen von 0 bis 1023 (nach rechts) und von (0 bis -1023) nach links
 * Mit diesen Zahlen ist es möglich, festzustellen in welche Richtung der Micro:bit geneigt wurde
-* In unserem Programm nützen wir diese Eigenschaft: Ein leichte Neigung ab 300 (nach rechts) addiert den Zähler (Zeiger auf die Buchstabenliste) um eines hoch (Rechtsneigung) oder vermindert um 1 wird (bei Linksneigung).
+* In unserem Programm nützen wir diese Eigenschaft: Eine leichte Neigung ab 300 (nach rechts) addiert den Zähler (Zeiger auf die Buchstabenliste) um eines hoch (Rechtsneigung) oder vermindert um 1 wird (bei Linksneigung).
 * Dies wird ständig in der Funktion "Dauerhaft" überprüft
 * Teste nun ausgiebig diese Funktion und versuche auch kleine Veränderungen durchzuführen
 
@@ -188,7 +188,7 @@ basic.forever(function () {
 ### Morsecode auswählen
 
 * Mit diesem Programmteil kann man zwar den Buchstaben wählen, aber muss ja noch den passenden Morsecode dazu finden
-* Dazu nimmt man den Zeiger (index) auf die Buchstabenliste und holt sich den Morsecode aus der **liste_morse_codes**
+* Dazu nimmt man den Zeiger (Index) auf die Buchstabenliste und holt sich den Morsecode aus der **liste_morse_codes**
 
 * [Programmcode: Morsecode vom Buchstaben](https://makecode.microbit.org/#pub:_HUfdjC3RAdvV)
 
