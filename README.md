@@ -1,6 +1,6 @@
 # Programmieren Advanced
 
-... IN ARBEIT ... derzeit nur Grobentwurf
+... IN ARBEIT ... derzeit nur Grobentwurf - wird noch stark gekürzt
 
 <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/mbit_li_re_x.png?raw=1">  <img width="20%" src="https://github.com/dlpl-mb/baa_morse_code_01/blob/master/images/robo_mbit_funk.gif?raw=1">
 
