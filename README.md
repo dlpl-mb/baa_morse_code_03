@@ -12,7 +12,7 @@ Hier in diesem Abschnitt werden wir dir jetzt einzelne Ideen mit Lösungen vorge
 
 * Wir wollen nun per Zufall Daten versenden, der Computer sollte auswählen, welches Zeichen versandt wird
 
-### Vorübung: Zeige eine Zufallszahl
+### Vorübung: Zeige eine Zufallszahlxx
 
 * Zufallszahlen befinden sich im Bereich der ``|Mathematik|``
 * Der Befehl heißt `Wähle eine zufällige Zahl von 0 bis 10`
